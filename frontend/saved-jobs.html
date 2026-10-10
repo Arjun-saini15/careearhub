@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saved Jobs — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">C</span>
+                <span>CareerHub</span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="dashboard.html">Dashboard</a>
+
+                <a href="jobs.html">Find Jobs</a>
+
+                <a href="#">Companies</a>
+
+                <a href="#">Career Resources</a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="profile.html" class="dashboard-user">
+
+                    <span class="user-avatar">
+                        AS
+                    </span>
+
+                    <span>
+                        Arjun Saini
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- SAVED JOBS MAIN SECTION -->
+    <!-- ============================= -->
+
+    <main class="section saved-jobs-page">
+
+        <div class="container">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="saved-page-header">
+
+                <div>
+
+                    <h1>
+                        Saved Jobs
+                    </h1>
+
+                    <p>
+                        Keep track of jobs you want to apply for later.
+                    </p>
+
+                </div>
+
+
+                <a href="jobs.html" class="btn btn-primary">
+                    Find more jobs
+                </a>
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- SAVED JOBS LAYOUT -->
+            <!-- ============================= -->
+
+            <div class="saved-jobs-layout">
+
+
+                <!-- ============================= -->
+                <!-- SAVED JOB LIST -->
+                <!-- ============================= -->
+
+                <section class="saved-jobs-content">
+
+
+                    <!-- LIST HEADER -->
+
+                    <div class="saved-list-header">
+
+                        <strong id="savedJobsCount">
+                            0 saved jobs
+                        </strong>
+
+
+                        <select class="saved-sort" id="savedJobsSort">
+
+                            <option value="recent">
+                                Recently saved
+                            </option>
+
+                            <option value="newest">
+                                Newest jobs
+                            </option>
+
+                            <option value="salary-high">
+                                Salary: High to Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ============================= -->
+                    <!-- SAVED JOBS WILL BE INSERTED -->
+                    <!-- BY JAVASCRIPT HERE -->
+                    <!-- ============================= -->
+
+                    <div id="savedJobsList">
+
+
+                        <!--
+                            JavaScript will create saved job cards here.
+
+                            Example:
+
+                            <article class="saved-job-card">
+
+                                ...
+
+                            </article>
+                        -->
+
+                    </div>
+
+
+
+                    <!-- ============================= -->
+                    <!-- EMPTY STATE -->
+                    <!-- ============================= -->
+
+                    <div id="savedJobsEmpty" class="saved-empty-state" hidden>
+
+                        <div class="tip-icon">
+                            ♡
+                        </div>
+
+
+                        <h2>
+                            No saved jobs yet
+                        </h2>
+
+
+                        <p>
+                            Save jobs that interest you and come back
+                            to them later.
+                        </p>
+
+
+                        <a href="jobs.html" class="btn btn-primary">
+                            Browse jobs
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ============================= -->
+                    <!-- PAGINATION -->
+                    <!-- ============================= -->
+
+                    <div class="saved-pagination" id="savedPagination">
+
+                        <button type="button" disabled>
+                            ←
+                        </button>
+
+                        <button type="button" class="active">
+                            1
+                        </button>
+
+                        <button type="button">
+                            2
+                        </button>
+
+                        <button type="button">
+                            →
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ============================= -->
+                <!-- SIDEBAR -->
+                <!-- ============================= -->
+
+                <aside class="saved-jobs-sidebar">
+
+
+                    <!-- TIP CARD -->
+
+                    <div class="saved-tip-card">
+
+                        <div class="tip-icon">
+                            ✓
+                        </div>
+
+
+                        <h2>
+                            Don't wait too long
+                        </h2>
+
+
+                        <p>
+                            Saved jobs can close or stop accepting
+                            applications. Apply early when you find a
+                            role that matches your profile.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- SEARCH CARD -->
+
+                    <div class="saved-search-card">
+
+                        <h2>
+                            Looking for something else?
+                        </h2>
+
+
+                        <p>
+                            Explore thousands of new opportunities on
+                            CareerHub.
+                        </p>
+
+
+                        <a href="jobs.html" class="btn btn-secondary btn-full">
+                            Browse jobs
+                        </a>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Built for modern hiring.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- MAIN JAVASCRIPT -->
+
+    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

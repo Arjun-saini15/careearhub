@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Log in — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="jobs.html">Find Jobs</a>
+
+                <a href="#">Companies</a>
+
+                <a href="#">Career Resources</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="register.html" class="btn btn-primary">
+                    Sign up
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         LOGIN PAGE
+         ========================= -->
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <div class="auth-header">
+
+                <h1>Welcome back</h1>
+
+                <p>
+                    Log in to manage your jobs, applications and profile.
+                </p>
+
+            </div>
+
+
+            <div class="auth-card">
+
+                <form>
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="form-label-row">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+
+                    </div>
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="checkbox-row">
+
+                        <input type="checkbox" id="remember" name="remember">
+
+                        <label for="remember">
+                            Keep me signed in
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button type="submit" class="btn btn-primary btn-full">
+
+                        Log in
+
+                    </button>
+
+                </form>
+
+
+                <!-- DIVIDER -->
+
+                <div class="auth-divider">
+
+                    <span>OR</span>
+
+                </div>
+
+
+                <!-- DEMO SOCIAL BUTTON -->
+
+                <button type="button" class="btn btn-secondary btn-full">
+
+                    Continue with Google
+
+                </button>
+
+
+                <!-- REGISTER -->
+
+                <p class="auth-footer-text">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Create an account
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Secure access to your career.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

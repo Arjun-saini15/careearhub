@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Users - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-mark">
+                C
+            </span>
+
+            <span>
+                CareerHub
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="users.html" class="active">
+                Users
+            </a>
+
+            <a href="jobs-management.html">
+                Jobs
+            </a>
+
+            <a href="companies.html">
+                Companies
+            </a>
+
+            <a href="applications-management.html">
+                Applications
+            </a>
+
+        </nav>
+
+
+
+        <!-- ADMIN ACTIONS -->
+
+        <div class="nav-actions">
+
+            <a
+                href="settings.html"
+                class="btn btn-outline"
+            >
+                Settings
+            </a>
+
+            <div class="user-avatar">
+                AS
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         PAGE HEADER
+         ================================================= -->
+
+    <section class="admin-page-header">
+
+        <div class="container">
+
+
+            <div>
+
+                <span class="page-eyebrow">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Manage Users
+                </h1>
+
+                <p>
+                    View, search and manage all CareerHub user accounts.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADD USER -->
+
+            <button
+                id="addUserBtn"
+                class="btn btn-primary"
+                type="button"
+            >
+                Add User
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         USER STATISTICS
+         ================================================= -->
+
+    <section class="admin-user-stats">
+
+        <div class="container">
+
+            <div class="user-stats-grid">
+
+
+                <!-- TOTAL USERS -->
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Total Users
+                    </span>
+
+                    <strong id="usersTotal">
+                        12,480
+                    </strong>
+
+                    <small>
+                        All registered users
+                    </small>
+
+                </div>
+
+
+
+                <!-- JOB SEEKERS -->
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Job Seekers
+                    </span>
+
+                    <strong id="usersJobSeekers">
+                        9,734
+                    </strong>
+
+                    <small>
+                        Active job seekers
+                    </small>
+
+                </div>
+
+
+
+                <!-- EMPLOYERS -->
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Employers
+                    </span>
+
+                    <strong id="usersEmployers">
+                        2,746
+                    </strong>
+
+                    <small>
+                        Registered employers
+                    </small>
+
+                </div>
+
+
+
+                <!-- SUSPENDED -->
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Suspended
+                    </span>
+
+                    <strong id="usersSuspended">
+                        38
+                    </strong>
+
+                    <small>
+                        Accounts suspended
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         USERS MANAGEMENT
+         ================================================= -->
+
+    <section class="users-section">
+
+        <div class="container">
+
+            <div class="users-card">
+
+
+                <!-- =========================================
+                     TOOLBAR
+                     ========================================= -->
+
+                <div class="users-toolbar">
+
+
+                    <!-- SEARCH -->
+
+                    <div class="users-search">
+
+                        <input
+                            id="userSearch"
+                            type="text"
+                            placeholder="Search by name or email..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <!-- FILTERS -->
+
+                    <div class="users-filters">
+
+
+                        <!-- ROLE -->
+
+                        <select id="userRoleFilter">
+
+                            <option value="all">
+                                All Roles
+                            </option>
+
+                            <option value="Job Seeker">
+                                Job Seeker
+                            </option>
+
+                            <option value="Employer">
+                                Employer
+                            </option>
+
+                            <option value="Admin">
+                                Admin
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- STATUS -->
+
+                        <select id="userStatusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Suspended">
+                                Suspended
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- SORT -->
+
+                        <select id="userSort">
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                            <option value="nameAsc">
+                                Name A-Z
+                            </option>
+
+                            <option value="nameDesc">
+                                Name Z-A
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     TABLE
+                     ========================================= -->
+
+                <div class="users-table-wrapper">
+
+                    <table class="users-table">
+
+
+                        <!-- TABLE HEADER -->
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    User
+                                </th>
+
+                                <th>
+                                    Role
+                                </th>
+
+                                <th>
+                                    Joined
+                                </th>
+
+                                <th>
+                                    Applications
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <!-- TABLE BODY -->
+
+                        <tbody id="usersTableBody">
+
+                            <!--
+                                JavaScript will generate
+                                user rows here.
+                            -->
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     NO USERS MESSAGE
+                     ========================================= -->
+
+                <div
+                    id="usersEmptyState"
+                    style="display:none; text-align:center; padding:40px;"
+                >
+
+                    <h3>
+                        No users found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     PAGINATION
+                     ========================================= -->
+
+                <div class="users-pagination">
+
+
+                    <!-- PAGINATION INFORMATION -->
+
+                    <span id="usersPaginationInfo">
+                        Showing 1–6 of 12,480 users
+                    </span>
+
+
+
+                    <!-- PAGINATION BUTTONS -->
+
+                    <div class="pagination-buttons">
+
+                        <button
+                            id="usersPreviousBtn"
+                            type="button"
+                            disabled
+                        >
+                            Previous
+                        </button>
+
+
+                        <div id="usersPageButtons">
+
+                            <button
+                                type="button"
+                                class="current-page"
+                                data-page="1"
+                            >
+                                1
+                            </button>
+
+                            <button
+                                type="button"
+                                data-page="2"
+                            >
+                                2
+                            </button>
+
+                            <button
+                                type="button"
+                                data-page="3"
+                            >
+                                3
+                            </button>
+
+                            <button
+                                type="button"
+                                data-page="4"
+                            >
+                                4
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            id="usersNextBtn"
+                            type="button"
+                        >
+                            Next
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-bottom">
+
+
+        <p>
+            © 2026 CareerHub. All rights reserved.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Help Center
+            </a>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="script.js"></script>
+<script src="js/api.js"></script>
+<script src="users.js"></script>
+
+
+</body>
+
+</html>

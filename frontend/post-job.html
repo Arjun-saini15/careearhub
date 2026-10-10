@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post a Job - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+                <span class="brand-mark">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="employer-dashboard.html">Dashboard</a>
+                <a href="my-jobs.html">My Jobs</a>
+                <a href="applicants.html">Applicants</a>
+                <a href="interviews.html">Interviews</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="company-profile.html" class="user-avatar">TN</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main class="post-job-page">
+
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="page-header post-job-header">
+
+                <div>
+                    <h1>Post a New Job</h1>
+
+                    <p>
+                        Create a job listing and reach qualified candidates.
+                    </p>
+                </div>
+
+                <a href="my-jobs.html" class="btn btn-outline">
+                    Cancel
+                </a>
+
+            </div>
+
+
+            <div class="post-job-layout">
+
+                <!-- Form -->
+                <section class="post-job-form-card">
+
+                    <form id="postJobForm">
+
+
+                        <!-- Basic Information -->
+                        <div class="job-form-section">
+
+                            <div class="job-form-section-header">
+                                <h2>Basic Information</h2>
+                                <p>Provide the main details about the position.</p>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Job Title <span>*</span>
+                                </label>
+
+                                <input type="text" id="jobTitle" class="form-input"
+                                    placeholder="e.g. Software Engineer">
+
+                            </div>
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Company <span>*</span>
+                                </label>
+
+                                <input type="text" id="jobCompany" class="form-input" placeholder="e.g. TCS">
+
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Department <span>*</span>
+                                    </label>
+
+                                    <select class="form-input">
+
+                                        <option value="">
+                                            Select department
+                                        </option>
+
+                                        <option>Engineering</option>
+                                        <option>Design</option>
+                                        <option>Marketing</option>
+                                        <option>Sales</option>
+                                        <option>Finance</option>
+                                        <option>Human Resources</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Employment Type <span>*</span>
+                                    </label>
+
+                                    <select class="form-input" id="jobType">
+
+                                        <option value="">
+                                            Select type
+                                        </option>
+
+                                        <option>Full-time</option>
+                                        <option>Part-time</option>
+                                        <option>Contract</option>
+                                        <option>Internship</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Experience Level <span>*</span>
+                                    </label>
+
+                                    <select class="form-input">
+
+                                        <option value="">
+                                            Select experience
+                                        </option>
+
+                                        <option>Fresher</option>
+                                        <option>0-1 Years</option>
+                                        <option>1-3 Years</option>
+                                        <option>3-5 Years</option>
+                                        <option>5+ Years</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Work Mode <span>*</span>
+                                    </label>
+
+                                    <select class="form-input" id="jobMode">
+
+                                        <option value="">
+                                            Select work mode
+                                        </option>
+
+                                        <option>On-site</option>
+                                        <option>Hybrid</option>
+                                        <option>Remote</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Location & Salary -->
+                        <div class="job-form-section">
+
+                            <div class="job-form-section-header">
+                                <h2>Location & Compensation</h2>
+                                <p>Specify where the job is located and its salary range.</p>
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        City <span>*</span>
+                                    </label>
+
+                                    <input type="text" class="form-input" id="jobLocation" placeholder="e.g. Bangalore">
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Country <span>*</span>
+                                    </label>
+
+                                    <select class="form-input">
+
+                                        <option>India</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>Canada</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row salary-row">
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Minimum Salary
+                                    </label>
+
+                                    <div class="input-with-prefix">
+                                        <span>₹</span>
+
+                                        <input type="number" class="form-input" id="jobSalary" placeholder="8">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Maximum Salary
+                                    </label>
+
+                                    <div class="input-with-prefix">
+                                        <span>₹</span>
+
+                                        <input type="number" class="form-input" placeholder="12">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Salary Period
+                                    </label>
+
+                                    <select class="form-input">
+
+                                        <option>Per Year</option>
+                                        <option>Per Month</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="checkbox-row">
+
+                                <input type="checkbox">
+
+                                <span>
+                                    Salary is negotiable
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- Job Description -->
+                        <div class="job-form-section">
+
+                            <div class="job-form-section-header">
+                                <h2>Job Description</h2>
+                                <p>Describe the role and what the candidate will be responsible for.</p>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Job Description <span>*</span>
+                                </label>
+
+                                <textarea id="jobDescription" class="form-textarea" rows="7"
+                                    placeholder="Describe the role, team and what the candidate will work on..."></textarea>
+
+                                <span class="input-hint">
+                                    Provide a clear and detailed description of the position.
+                                </span>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Responsibilities
+                                </label>
+
+                                <textarea class="form-textarea" rows="6"
+                                    placeholder="List the key responsibilities of this role..."></textarea>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Requirements
+                                </label>
+
+                                <textarea class="form-textarea" rows="6"
+                                    placeholder="Mention education, experience and other requirements..."></textarea>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Skills -->
+                        <div class="job-form-section">
+
+                            <div class="job-form-section-header">
+                                <h2>Skills & Qualifications</h2>
+                                <p>Add the skills candidates should have for this position.</p>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Required Skills <span>*</span>
+                                </label>
+
+                                <input type="text" id="jobSkills" class="form-input"
+                                    placeholder="e.g. Java, Spring Boot, MySQL">
+
+                                <span class="input-hint">
+                                    Separate multiple skills with commas.
+                                </span>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Education
+                                </label>
+
+                                <select class="form-input">
+
+                                    <option>Any Education</option>
+                                    <option>Diploma</option>
+                                    <option>Bachelor's Degree</option>
+                                    <option>Master's Degree</option>
+                                    <option>PhD</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Application Settings -->
+                        <div class="job-form-section">
+
+                            <div class="job-form-section-header">
+                                <h2>Application Settings</h2>
+                                <p>Configure how candidates can apply for this job.</p>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Application Deadline
+                                </label>
+
+                                <input type="date" class="form-input">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Application Method
+                                </label>
+
+                                <div class="application-methods">
+
+                                    <label class="method-option">
+
+                                        <input type="radio" name="application-method" checked>
+
+                                        <div>
+                                            <strong>CareerHub Applications</strong>
+
+                                            <span>
+                                                Candidates apply directly through CareerHub.
+                                            </span>
+                                        </div>
+
+                                    </label>
+
+
+                                    <label class="method-option">
+
+                                        <input type="radio" name="application-method">
+
+                                        <div>
+                                            <strong>External Application</strong>
+
+                                            <span>
+                                                Redirect candidates to an external application page.
+                                            </span>
+                                        </div>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Form Actions -->
+                        <div class="post-job-actions">
+
+                            <a href="my-jobs.html" class="btn btn-outline">
+                                Cancel
+                            </a>
+
+                            <button type="button" class="btn btn-outline">
+                                Save as Draft
+                            </button>
+
+                            <button type="submit" class="btn btn-primary">
+                                Publish Job
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- Sidebar -->
+                <aside class="post-job-sidebar">
+
+                    <div class="job-preview-card">
+
+                        <div class="preview-header">
+
+                            <span class="preview-label">
+                                JOB PREVIEW
+                            </span>
+
+                            <div class="preview-logo">
+                                TN
+                            </div>
+
+                        </div>
+
+
+                        <h2>Your Job Title</h2>
+
+                        <p class="preview-company">
+                            TechNova · India
+                        </p>
+
+
+                        <div class="preview-details">
+
+                            <span>📍 Location</span>
+                            <span>💼 Full-time</span>
+                            <span>🏠 Hybrid</span>
+
+                        </div>
+
+
+                        <div class="preview-salary">
+                            ₹8–12 LPA
+                        </div>
+
+
+                        <div class="preview-divider"></div>
+
+
+                        <h3>About the role</h3>
+
+                        <p>
+                            Your job description will appear here once you start
+                            adding information about the position.
+                        </p>
+
+                    </div>
+
+
+                    <div class="posting-tips">
+
+                        <h3>Posting Tips</h3>
+
+                        <div class="tip-item">
+                            <span>01</span>
+                            <p>Use a clear and specific job title.</p>
+                        </div>
+
+                        <div class="tip-item">
+                            <span>02</span>
+                            <p>Describe responsibilities in simple language.</p>
+                        </div>
+
+                        <div class="tip-item">
+                            <span>03</span>
+                            <p>Add relevant skills and qualifications.</p>
+                        </div>
+
+                        <div class="tip-item">
+                            <span>04</span>
+                            <p>Keep salary and location information accurate.</p>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="brand footer-brand">
+                    <span class="brand-mark">C</span>
+                    <span>CareerHub</span>
+                </div>
+
+                <p>
+                    Connecting talented people with meaningful opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+                <a href="employer-dashboard.html">Dashboard</a>
+                <a href="my-jobs.html">My Jobs</a>
+                <a href="applicants.html">Applicants</a>
+                <a href="company-profile.html">Company Profile</a>
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+            <p>© 2026 CareerHub. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

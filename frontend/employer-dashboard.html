@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employer Dashboard - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark">C</span>
+
+                <span>CareerHub</span>
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="employer-dashboard.html" class="active">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="interviews.html">
+                    Interviews
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="post-job.html" class="btn btn-primary">
+                    Post a Job
+                </a>
+
+                <a href="company-profile.html" class="user-avatar">
+                    TN
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard-page">
+
+        <div class="container">
+
+            <!-- ================= HEADER ================= -->
+
+            <div class="page-header dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Employer Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your jobs, applicants and hiring activity.
+                    </p>
+
+                </div>
+
+                <a href="post-job.html" class="btn btn-primary">
+                    + Post a Job
+                </a>
+
+            </div>
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="stats-grid">
+
+                <!-- Active Jobs -->
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Active Jobs
+                        </p>
+
+                        <h2 id="employerActiveJobs">
+                            0
+                        </h2>
+
+                        <p class="stat-change">
+                            Current job postings
+                        </p>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        💼
+                    </div>
+
+                </div>
+
+
+                <!-- Total Applicants -->
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Total Applicants
+                        </p>
+
+                        <h2 id="employerApplicants">
+                            0
+                        </h2>
+
+                        <p class="stat-change">
+                            Applications received
+                        </p>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                </div>
+
+
+                <!-- Interviews -->
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Interviews
+                        </p>
+
+                        <h2 id="employerInterviews">
+                            0
+                        </h2>
+
+                        <p class="stat-change">
+                            Scheduled interviews
+                        </p>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                </div>
+
+
+                <!-- Hired -->
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Hired
+                        </p>
+
+                        <h2 id="employerHired">
+                            0
+                        </h2>
+
+                        <p class="stat-change">
+                            Candidates hired
+                        </p>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- ================= RECENT JOBS ================= -->
+
+                <section class="dashboard-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Job Posts
+                            </h2>
+
+                            <p>
+                                Track your latest job postings.
+                            </p>
+
+                        </div>
+
+                        <a href="my-jobs.html" class="text-link">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <!-- Backend jobs are loaded here -->
+
+                    <div
+                        class="employer-jobs-list"
+                        id="employerJobsList">
+
+                        <div class="empty-state">
+
+                            <h3>
+                                Loading jobs...
+                            </h3>
+
+                            <p>
+                                Please wait while your jobs are loaded.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= QUICK ACTIONS ================= -->
+
+                <aside class="dashboard-sidebar">
+
+                    <div class="dashboard-card">
+
+                        <div class="section-header">
+
+                            <div>
+
+                                <h2>
+                                    Quick Actions
+                                </h2>
+
+                                <p>
+                                    Common employer tasks.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+                            <a
+                                href="post-job.html"
+                                class="quick-action">
+
+                                <span class="quick-action-icon">
+                                    +
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Post a New Job
+                                    </strong>
+
+                                    <p>
+                                        Create a new job listing.
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="applicants.html"
+                                class="quick-action">
+
+                                <span class="quick-action-icon">
+                                    👥
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Review Applicants
+                                    </strong>
+
+                                    <p>
+                                        Check your latest applicants.
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="interviews.html"
+                                class="quick-action">
+
+                                <span class="quick-action-icon">
+                                    📅
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Manage Interviews
+                                    </strong>
+
+                                    <p>
+                                        View upcoming interviews.
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="company-profile.html"
+                                class="quick-action">
+
+                                <span class="quick-action-icon">
+                                    🏢
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Company Profile
+                                    </strong>
+
+                                    <p>
+                                        Update your company information.
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="brand footer-brand">
+
+                    <span class="brand-mark">
+                        C
+                    </span>
+
+                    <span>
+                        CareerHub
+                    </span>
+
+                </div>
+
+                <p>
+                    Connecting talented people with meaningful opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="company-profile.html">
+                    Company Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- API helper MUST load before main script -->
+
+    <script src="js/api.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

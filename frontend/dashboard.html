@@ -1,0 +1,694 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">C</span>
+
+                <span>CareerHub</span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="dashboard.html" class="active">
+                    Dashboard
+                </a>
+
+                <a href="jobs.html">
+                    Find Jobs
+                </a>
+
+                <a href="#">
+                    Companies
+                </a>
+
+                <a href="#">
+                    Career Resources
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="profile.html" class="dashboard-user">
+
+                    <span class="user-avatar">
+                        AS
+                    </span>
+
+                    <span id="dashboardUserName">
+                        User
+                    </span>
+
+                </a>
+                <button type="button" id="logoutBtn" class="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- DASHBOARD -->
+    <!-- ============================= -->
+
+    <main class="section dashboard-page">
+
+        <div class="container">
+
+
+            <!-- ============================= -->
+            <!-- WELCOME SECTION -->
+            <!-- ============================= -->
+
+            <div class="dashboard-welcome">
+
+                <div>
+
+                    <p class="dashboard-greeting">
+                        Welcome back
+                    </p>
+
+                    <h1 id="dashboardGreeting">
+                        Good evening
+                    </h1>
+
+                    <p>
+                        Keep your profile updated and stay on top of your
+                        latest applications.
+                    </p>
+
+                </div>
+
+
+                <a href="jobs.html" class="btn btn-primary">
+                    Find jobs
+                </a>
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- DASHBOARD STATS -->
+            <!-- ============================= -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Applications
+                    </span>
+
+                    <strong id="applicationsCount">
+                        0
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Total applications
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Under review
+                    </span>
+
+                    <strong id="reviewCount">
+                        4
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Applications being reviewed
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Shortlisted
+                    </span>
+
+                    <strong id="shortlistedCount">
+                        2
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Shortlisted applications
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Saved jobs
+                    </span>
+
+                    <strong id="savedJobsCount">
+                        8
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Jobs saved for later
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- MAIN DASHBOARD GRID -->
+            <!-- ============================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- ============================= -->
+                <!-- RECENT APPLICATIONS -->
+                <!-- ============================= -->
+
+                <section class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent applications
+                            </h2>
+
+                            <p>
+                                Track the latest jobs you applied for.
+                            </p>
+
+                        </div>
+
+                        <a href="applications.html">
+                            View all
+                        </a>
+
+                    </div>
+
+
+                    <div class="application-list">
+
+
+                        <div class="application-row">
+
+                            <div class="application-company-logo">
+                                T
+                            </div>
+
+                            <div class="application-job">
+
+                                <strong>
+                                    Frontend Developer
+                                </strong>
+
+                                <span>
+                                    TechNova · Bengaluru
+                                </span>
+
+                            </div>
+
+                            <span class="status-badge status-review">
+                                Under Review
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="application-row">
+
+                            <div class="application-company-logo">
+                                D
+                            </div>
+
+                            <div class="application-job">
+
+                                <strong>
+                                    Java Backend Developer
+                                </strong>
+
+                                <span>
+                                    DataCore · Hyderabad
+                                </span>
+
+                            </div>
+
+                            <span class="status-badge status-shortlisted">
+                                Shortlisted
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="application-row">
+
+                            <div class="application-company-logo">
+                                F
+                            </div>
+
+                            <div class="application-job">
+
+                                <strong>
+                                    Product Designer
+                                </strong>
+
+                                <span>
+                                    FinEdge · Mumbai
+                                </span>
+
+                            </div>
+
+                            <span class="status-badge status-applied">
+                                Applied
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="application-row">
+
+                            <div class="application-company-logo">
+                                C
+                            </div>
+
+                            <div class="application-job">
+
+                                <strong>
+                                    Software Engineer
+                                </strong>
+
+                                <span>
+                                    CloudWorks · Pune
+                                </span>
+
+                            </div>
+
+                            <span class="status-badge status-interview">
+                                Interview
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ============================= -->
+                <!-- PROFILE COMPLETION -->
+                <!-- ============================= -->
+
+                <section class="dashboard-card profile-progress-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Profile strength
+                            </h2>
+
+                            <p>
+                                Complete your profile to improve visibility.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-progress">
+
+                        <div class="progress-circle">
+                            75%
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Good progress
+                            </strong>
+
+                            <p>
+                                Add your skills and portfolio to complete
+                                your profile.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <a href="profile.html" class="btn btn-secondary btn-full">
+
+                        Complete profile
+
+                    </a>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- ============================= -->
+            <!-- RECOMMENDED JOBS -->
+            <!-- ============================= -->
+
+            <section class="dashboard-section">
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <h2>
+                            Recommended jobs
+                        </h2>
+
+                        <p>
+                            Jobs that may match your profile and interests.
+                        </p>
+
+                    </div>
+
+                    <a href="jobs.html">
+                        Browse all jobs
+                    </a>
+
+                </div>
+
+
+
+                <div class="dashboard-job-grid">
+
+
+                    <!-- JOB 1 -->
+
+                    <div class="dashboard-job-card" data-job-id="frontend-developer"
+                        data-job-title="Frontend Developer">
+
+
+                        <div class="job-card-top">
+
+                            <div class="company-logo">
+                                T
+                            </div>
+
+                            <button type="button" class="save-job-btn" data-job-id="frontend-developer"
+                                aria-label="Save Frontend Developer">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Frontend Developer
+                        </h3>
+
+                        <p class="job-company">
+                            TechNova
+                        </p>
+
+                        <p class="job-location">
+                            Bengaluru · Hybrid
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                            <span>
+                                React
+                            </span>
+
+                            <span>
+                                Full-time
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-job-bottom">
+
+                            <strong>
+                                ₹8–12 LPA
+                            </strong>
+
+                            <span>
+                                2 days ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- JOB 2 -->
+
+                    <div class="dashboard-job-card" data-job-id="java-backend-developer"
+                        data-job-title="Java Backend Developer">
+
+
+                        <div class="job-card-top">
+
+                            <div class="company-logo">
+                                D
+                            </div>
+
+                            <button type="button" class="save-job-btn" data-job-id="java-backend-developer"
+                                aria-label="Save Java Backend Developer">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Java Backend Developer
+                        </h3>
+
+                        <p class="job-company">
+                            DataCore
+                        </p>
+
+                        <p class="job-location">
+                            Hyderabad · On-site
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span>
+                                Java
+                            </span>
+
+                            <span>
+                                Spring Boot
+                            </span>
+
+                            <span>
+                                MySQL
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-job-bottom">
+
+                            <strong>
+                                ₹9–14 LPA
+                            </strong>
+
+                            <span>
+                                4 days ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- JOB 3 -->
+
+                    <div class="dashboard-job-card" data-job-id="software-engineer" data-job-title="Software Engineer">
+
+
+                        <div class="job-card-top">
+
+                            <div class="company-logo">
+                                C
+                            </div>
+
+                            <button type="button" class="save-job-btn" data-job-id="software-engineer"
+                                aria-label="Save Software Engineer">
+
+                                ♡
+
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Software Engineer
+                        </h3>
+
+                        <p class="job-company">
+                            CloudWorks
+                        </p>
+
+                        <p class="job-location">
+                            Pune · Hybrid
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span>
+                                Java
+                            </span>
+
+                            <span>
+                                REST API
+                            </span>
+
+                            <span>
+                                AWS
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-job-bottom">
+
+                            <strong>
+                                ₹10–15 LPA
+                            </strong>
+
+                            <span>
+                                1 week ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Built for modern hiring.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- MAIN JAVASCRIPT -->
+
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```

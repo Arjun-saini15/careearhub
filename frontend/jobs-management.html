@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Jobs - CareerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">C</span>
+            <span>CareerHub</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="users.html">Users</a>
+            <a href="jobs-management.html" class="active">Jobs</a>
+            <a href="companies.html">Companies</a>
+            <a href="applications-management.html">Applications</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="settings.html" class="btn btn-outline">Settings</a>
+            <div class="user-avatar">AS</div>
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Page Header -->
+    <section class="admin-page-header">
+        <div class="container">
+
+            <div>
+                <span class="page-eyebrow">ADMIN PANEL</span>
+
+                <h1>Manage Jobs</h1>
+
+                <p>
+                    View, search and manage all jobs posted on CareerHub.
+                </p>
+            </div>
+
+            <a href="post-job.html" class="btn btn-primary">
+                + Post a Job
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Job Statistics -->
+    <section class="admin-user-stats">
+        <div class="container">
+
+            <div class="user-stats-grid">
+
+                <div class="user-stat-card">
+                    <span>Total Jobs</span>
+                    <strong id="jobsTotal">12,480</strong>
+                    <small>All posted jobs</small>
+                </div>
+
+                <div class="user-stat-card">
+                    <span>Active Jobs</span>
+                    <strong id="jobsActive">8,942</strong>
+                    <small>Currently accepting applications</small>
+                </div>
+
+                <div class="user-stat-card">
+                    <span>Pending Jobs</span>
+                    <strong id="jobsPending">426</strong>
+                    <small>Waiting for approval</small>
+                </div>
+
+                <div class="user-stat-card">
+                    <span>Expired Jobs</span>
+                    <strong id="jobsExpired">3,112</strong>
+                    <small>Jobs no longer active</small>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Jobs Section -->
+    <section class="users-section">
+
+        <div class="container">
+
+            <div class="users-card">
+
+                <!-- Toolbar -->
+                <div class="users-toolbar">
+
+                    <!-- Search -->
+                    <div class="users-search">
+
+                        <input
+                            type="text"
+                            id="jobSearch"
+                            placeholder="Search by job title or company..."
+                        >
+
+                    </div>
+
+
+                    <!-- Filters -->
+                    <div class="users-filters">
+
+                        <select id="jobStatusFilter">
+
+                            <option value="all">All Status</option>
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                            <option value="Expired">
+                                Expired
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+
+                        <select id="jobTypeFilter">
+
+                            <option value="all">All Job Types</option>
+
+                            <option value="Full Time">
+                                Full Time
+                            </option>
+
+                            <option value="Part Time">
+                                Part Time
+                            </option>
+
+                            <option value="Internship">
+                                Internship
+                            </option>
+
+                            <option value="Contract">
+                                Contract
+                            </option>
+
+                            <option value="Remote">
+                                Remote
+                            </option>
+
+                        </select>
+
+
+                        <select id="jobSort">
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                            <option value="salary-high">
+                                Salary High-Low
+                            </option>
+
+                            <option value="salary-low">
+                                Salary Low-High
+                            </option>
+
+                            <option value="title-az">
+                                Title A-Z
+                            </option>
+
+                            <option value="title-za">
+                                Title Z-A
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Jobs Table -->
+                <div class="users-table-wrapper">
+
+                    <table class="users-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Job</th>
+
+                                <th>Company</th>
+
+                                <th>Type</th>
+
+                                <th>Posted</th>
+
+                                <th>Applications</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="jobsTableBody">
+
+                            <!-- Jobs will be inserted by JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+
+                    <!-- Empty State -->
+                    <div
+                        id="jobsEmptyState"
+                        style="display: none; padding: 40px; text-align: center;"
+                    >
+
+                        <h3>No jobs found</h3>
+
+                        <p>
+                            Try changing your search or filters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="users-pagination">
+
+                    <span id="jobsPaginationInfo">
+                        Showing 1–6 of 12,480 jobs
+                    </span>
+
+
+                    <div class="pagination-buttons">
+
+                        <button
+                            id="jobsPreviousBtn"
+                            disabled
+                        >
+                            Previous
+                        </button>
+
+
+                        <div id="jobsPageButtons"></div>
+
+
+                        <button id="jobsNextBtn">
+                            Next
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 CareerHub. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Terms</a>
+
+            <a href="#">Help Center</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+ <script src="js/api.js"></script>
+<script src="script.js"></script>
+<script src="jobs-management.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | CareerHub Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-inner">
+
+            <a href="admin-dashboard.html" class="logo">
+                CareerHub
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <a href="jobs-management.html">
+                    Jobs
+                </a>
+
+                <a href="companies.html">
+                    Companies
+                </a>
+
+                <a href="applications-management.html">
+                    Applications
+                </a>
+
+                <a href="analytics.html" class="active">
+                    Analytics
+                </a>
+
+            </nav>
+
+            <div class="navbar-actions">
+
+                <a href="index.html" class="btn btn-outline">
+                    View Site
+                </a>
+
+                <a href="login.html" class="btn btn-primary">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="page-header">
+
+            <div class="container">
+
+                <div class="page-header-content">
+
+                    <div>
+
+                        <span class="page-eyebrow">
+                            ADMIN ANALYTICS
+                        </span>
+
+                        <h1>
+                            Platform Analytics
+                        </h1>
+
+                        <p>
+                            Monitor CareerHub's users, jobs,
+                            applications and hiring activity.
+                        </p>
+
+                    </div>
+
+                    <div class="analytics-date-box">
+
+                        <span>
+                            Reporting Period
+                        </span>
+
+                        <strong id="analyticsPeriod">
+                            September 2026
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ANALYTICS CONTENT
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <!-- =================================================
+                     OVERVIEW STATS
+                ================================================== -->
+
+                <div class="stats-grid analytics-stats-grid">
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-label">
+                                Total Users
+                            </span>
+
+                            <span class="stat-icon">
+                                👥
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-value" id="analyticsTotalUsers">
+                            8,426
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +12.4% this month
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-label">
+                                Active Jobs
+                            </span>
+
+                            <span class="stat-icon">
+                                💼
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-value" id="analyticsActiveJobs">
+                            8,942
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +8.7% this month
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-label">
+                                Applications
+                            </span>
+
+                            <span class="stat-icon">
+                                📄
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-value" id="analyticsApplications">
+                            38,642
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +15.2% this month
+                        </span>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-label">
+                                Hired Candidates
+                            </span>
+
+                            <span class="stat-icon">
+                                🎯
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-value" id="analyticsHired">
+                            2,416
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +9.3% this month
+                        </span>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     ANALYTICS GRID
+                ================================================== -->
+
+                <div class="analytics-grid">
+
+
+                    <!-- =============================================
+                         APPLICATION STATUS
+                    ============================================== -->
+
+                    <article class="analytics-card">
+
+                        <div class="analytics-card-header">
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    APPLICATIONS
+                                </span>
+
+                                <h2>
+                                    Application Status
+                                </h2>
+
+                            </div>
+
+                            <span class="analytics-card-period">
+                                This Month
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-status-chart" id="applicationStatusChart">
+
+                            <!-- JavaScript will populate this -->
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =============================================
+                         USER DISTRIBUTION
+                    ============================================== -->
+
+                    <article class="analytics-card">
+
+                        <div class="analytics-card-header">
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    USERS
+                                </span>
+
+                                <h2>
+                                    User Distribution
+                                </h2>
+
+                            </div>
+
+                            <span class="analytics-card-period">
+                                Current
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-distribution" id="userDistribution">
+
+                            <!-- JavaScript will populate this -->
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     JOB PERFORMANCE
+                ================================================== -->
+
+                <article class="analytics-card analytics-full-card">
+
+                    <div class="analytics-card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                JOB MARKET
+                            </span>
+
+                            <h2>
+                                Job Performance
+                            </h2>
+
+                            <p>
+                                Overview of jobs receiving the
+                                highest number of applications.
+                            </p>
+
+                        </div>
+
+                        <select id="analyticsJobPeriod" class="analytics-select">
+
+                            <option value="month">
+                                This Month
+                            </option>
+
+                            <option value="quarter">
+                                This Quarter
+                            </option>
+
+                            <option value="year">
+                                This Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="analytics-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Job
+                                    </th>
+
+                                    <th>
+                                        Company
+                                    </th>
+
+                                    <th>
+                                        Applications
+                                    </th>
+
+                                    <th>
+                                        Interviews
+                                    </th>
+
+                                    <th>
+                                        Hired
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="analyticsJobsTableBody">
+
+                                <!-- JavaScript will populate rows -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     MONTHLY ACTIVITY
+                ================================================== -->
+
+                <div class="analytics-grid">
+
+
+                    <!-- =============================================
+                         MONTHLY USERS
+                    ============================================== -->
+
+                    <article class="analytics-card">
+
+                        <div class="analytics-card-header">
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    USER GROWTH
+                                </span>
+
+                                <h2>
+                                    Monthly User Growth
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="analytics-bars" id="userGrowthChart">
+
+                            <!-- JavaScript will populate chart -->
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =============================================
+                         APPLICATION ACTIVITY
+                    ============================================== -->
+
+                    <article class="analytics-card">
+
+                        <div class="analytics-card-header">
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Application Activity
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="analytics-bars" id="applicationActivityChart">
+
+                            <!-- JavaScript will populate chart -->
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     TOP CATEGORIES
+                ================================================== -->
+
+                <article class="analytics-card analytics-full-card">
+
+                    <div class="analytics-card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                JOB CATEGORIES
+                            </span>
+
+                            <h2>
+                                Popular Job Categories
+                            </h2>
+
+                            <p>
+                                Categories based on job listings
+                                and application activity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-performance" id="categoryPerformance">
+
+                        <!-- JavaScript will populate categories -->
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     RECENT ACTIVITY
+                ================================================== -->
+
+                <article class="analytics-card analytics-full-card">
+
+                    <div class="analytics-card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                PLATFORM ACTIVITY
+                            </span>
+
+                            <h2>
+                                Recent Activity
+                            </h2>
+
+                        </div>
+
+                        <a href="admin-dashboard.html" class="text-link">
+                            Dashboard
+                        </a>
+
+                    </div>
+
+
+                    <div class="analytics-activity-list" id="analyticsActivityList">
+
+                        <!-- JavaScript will populate activity -->
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong class="footer-logo">
+                    CareerHub
+                </strong>
+
+                <p>
+                    Admin Analytics & Management
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+    <script src="analytics.js"></script>
+
+</body>
+
+</html>

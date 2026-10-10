@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Applicants | CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+                <span class="brand-logo">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html" class="active">
+                    Applicants
+                </a>
+
+                <a href="interviews.html">
+                    Interviews
+                </a>
+
+                <a href="post-job.html" class="nav-post-job">
+                    Post a Job
+                </a>
+
+            </nav>
+
+            <div class="nav-user">
+                <div class="user-avatar">
+                    AS
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="page-container">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="page-eyebrow">
+                    TALENT MANAGEMENT
+                </p>
+
+                <h1>
+                    Applicants
+                </h1>
+
+                <p>
+                    Review and manage candidates who applied
+                    to your job openings.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Total Applicants
+                    </span>
+
+                    <strong id="applicantsTotal">
+                        124
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    🕐
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Under Review
+                    </span>
+
+                    <strong id="applicantsReview">
+                        48
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Shortlisted
+                    </span>
+
+                    <strong id="applicantsShortlisted">
+                        24
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Interviews
+                    </span>
+
+                    <strong id="applicantsInterview">
+                        16
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="content-card applicants-toolbar">
+
+            <div class="toolbar-search">
+
+                <label for="applicantSearch">
+                    Search Applicants
+                </label>
+
+                <input type="search" id="applicantSearch" placeholder="Search by name, email or skill...">
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="applicantJobFilter">
+                    Job
+                </label>
+
+                <select id="applicantJobFilter">
+
+                    <option value="all">
+                        All Jobs
+                    </option>
+
+                    <option value="frontend-developer">
+                        Frontend Developer
+                    </option>
+
+                    <option value="java-backend-developer">
+                        Java Backend Developer
+                    </option>
+
+                    <option value="software-engineer">
+                        Software Engineer
+                    </option>
+
+                    <option value="product-designer">
+                        Product Designer
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="applicantStatusFilter">
+                    Status
+                </label>
+
+                <select id="applicantStatusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="review">
+                        Under Review
+                    </option>
+
+                    <option value="shortlisted">
+                        Shortlisted
+                    </option>
+
+                    <option value="interview">
+                        Interview
+                    </option>
+
+                    <option value="rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="applicantSort">
+                    Sort
+                </label>
+
+                <select id="applicantSort">
+
+                    <option value="newest">
+                        Newest
+                    </option>
+
+                    <option value="oldest">
+                        Oldest
+                    </option>
+
+                    <option value="name">
+                        Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT HEADER ================= -->
+
+        <section class="section-heading">
+
+            <div>
+
+                <h2>
+                    Candidate Applications
+                </h2>
+
+                <p id="applicantsResultsCount">
+                    Showing 8 applicants
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICANTS ================= -->
+
+        <section id="applicantsList" class="applicants-list">
+
+
+            <!-- Applicant 1 -->
+
+            <article class="applicant-card" data-applicant-id="1" data-job-id="frontend-developer" data-status="review"
+                data-date="2026-09-19" data-name="Rahul Sharma">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        RS
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Rahul Sharma
+                        </h3>
+
+                        <p class="applicant-title">
+                            Frontend Developer
+                        </p>
+
+                        <p class="applicant-meta">
+                            rahul.sharma@email.com
+                            ·
+                            2 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>HTML/CSS</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Frontend Developer
+                    </strong>
+
+                    <span>
+                        Bengaluru · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge review">
+                        Under Review
+                    </span>
+
+                    <span class="application-date">
+                        Sep 19, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="1">
+                        View
+                    </button>
+
+                    <button type="button" class="shortlist-applicant-btn" data-applicant-id="1">
+                        Shortlist
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 2 -->
+
+            <article class="applicant-card" data-applicant-id="2" data-job-id="java-backend-developer"
+                data-status="shortlisted" data-date="2026-09-18" data-name="Priya Verma">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        PV
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Priya Verma
+                        </h3>
+
+                        <p class="applicant-title">
+                            Java Backend Developer
+                        </p>
+
+                        <p class="applicant-meta">
+                            priya.verma@email.com
+                            ·
+                            3 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Java Backend Developer
+                    </strong>
+
+                    <span>
+                        Hyderabad · On-site
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge shortlisted">
+                        Shortlisted
+                    </span>
+
+                    <span class="application-date">
+                        Sep 18, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="2">
+                        View
+                    </button>
+
+                    <button type="button" class="interview-applicant-btn" data-applicant-id="2">
+                        Schedule Interview
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 3 -->
+
+            <article class="applicant-card" data-applicant-id="3" data-job-id="software-engineer"
+                data-status="interview" data-date="2026-09-17" data-name="Aman Gupta">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        AG
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Aman Gupta
+                        </h3>
+
+                        <p class="applicant-title">
+                            Software Engineer
+                        </p>
+
+                        <p class="applicant-meta">
+                            aman.gupta@email.com
+                            ·
+                            4 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Java</span>
+                            <span>REST API</span>
+                            <span>AWS</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Software Engineer
+                    </strong>
+
+                    <span>
+                        Pune · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge interview">
+                        Interview
+                    </span>
+
+                    <span class="application-date">
+                        Sep 17, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="3">
+                        View
+                    </button>
+
+                    <button type="button" class="view-interview-btn" data-applicant-id="3">
+                        View Interview
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 4 -->
+
+            <article class="applicant-card" data-applicant-id="4" data-job-id="frontend-developer" data-status="review"
+                data-date="2026-09-16" data-name="Sneha Singh">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        SS
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Sneha Singh
+                        </h3>
+
+                        <p class="applicant-title">
+                            Frontend Developer
+                        </p>
+
+                        <p class="applicant-meta">
+                            sneha.singh@email.com
+                            ·
+                            1 year experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Frontend Developer
+                    </strong>
+
+                    <span>
+                        Bengaluru · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge review">
+                        Under Review
+                    </span>
+
+                    <span class="application-date">
+                        Sep 16, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="4">
+                        View
+                    </button>
+
+                    <button type="button" class="shortlist-applicant-btn" data-applicant-id="4">
+                        Shortlist
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 5 -->
+
+            <article class="applicant-card" data-applicant-id="5" data-job-id="product-designer"
+                data-status="shortlisted" data-date="2026-09-15" data-name="Neha Kapoor">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        NK
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Neha Kapoor
+                        </h3>
+
+                        <p class="applicant-title">
+                            Product Designer
+                        </p>
+
+                        <p class="applicant-meta">
+                            neha.kapoor@email.com
+                            ·
+                            3 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Figma</span>
+                            <span>UI/UX</span>
+                            <span>Prototyping</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Product Designer
+                    </strong>
+
+                    <span>
+                        Mumbai · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge shortlisted">
+                        Shortlisted
+                    </span>
+
+                    <span class="application-date">
+                        Sep 15, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="5">
+                        View
+                    </button>
+
+                    <button type="button" class="interview-applicant-btn" data-applicant-id="5">
+                        Schedule Interview
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 6 -->
+
+            <article class="applicant-card" data-applicant-id="6" data-job-id="java-backend-developer"
+                data-status="review" data-date="2026-09-14" data-name="Rohit Kumar">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        RK
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Rohit Kumar
+                        </h3>
+
+                        <p class="applicant-title">
+                            Java Developer
+                        </p>
+
+                        <p class="applicant-meta">
+                            rohit.kumar@email.com
+                            ·
+                            2 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Java</span>
+                            <span>Spring</span>
+                            <span>SQL</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Java Backend Developer
+                    </strong>
+
+                    <span>
+                        Hyderabad · On-site
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge review">
+                        Under Review
+                    </span>
+
+                    <span class="application-date">
+                        Sep 14, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="6">
+                        View
+                    </button>
+
+                    <button type="button" class="shortlist-applicant-btn" data-applicant-id="6">
+                        Shortlist
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 7 -->
+
+            <article class="applicant-card" data-applicant-id="7" data-job-id="software-engineer" data-status="rejected"
+                data-date="2026-09-13" data-name="Vikas Yadav">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        VY
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Vikas Yadav
+                        </h3>
+
+                        <p class="applicant-title">
+                            Software Engineer
+                        </p>
+
+                        <p class="applicant-meta">
+                            vikas.yadav@email.com
+                            ·
+                            1 year experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>Git</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Software Engineer
+                    </strong>
+
+                    <span>
+                        Pune · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge rejected">
+                        Rejected
+                    </span>
+
+                    <span class="application-date">
+                        Sep 13, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="7">
+                        View
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Applicant 8 -->
+
+            <article class="applicant-card" data-applicant-id="8" data-job-id="frontend-developer"
+                data-status="interview" data-date="2026-09-12" data-name="Karan Mehta">
+
+                <div class="applicant-main">
+
+                    <div class="applicant-avatar">
+                        KM
+                    </div>
+
+                    <div class="applicant-info">
+
+                        <h3>
+                            Karan Mehta
+                        </h3>
+
+                        <p class="applicant-title">
+                            Frontend Developer
+                        </p>
+
+                        <p class="applicant-meta">
+                            karan.mehta@email.com
+                            ·
+                            3 years experience
+                        </p>
+
+                        <div class="skill-tags">
+
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Next.js</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="applicant-job">
+
+                    <span class="small-label">
+                        Applied For
+                    </span>
+
+                    <strong>
+                        Frontend Developer
+                    </strong>
+
+                    <span>
+                        Bengaluru · Hybrid
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-status">
+
+                    <span class="status-badge interview">
+                        Interview
+                    </span>
+
+                    <span class="application-date">
+                        Sep 12, 2026
+                    </span>
+
+                </div>
+
+
+                <div class="applicant-actions">
+
+                    <button type="button" class="view-applicant-btn" data-applicant-id="8">
+                        View
+                    </button>
+
+                    <button type="button" class="view-interview-btn" data-applicant-id="8">
+                        View Interview
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <section id="applicantsEmpty" class="empty-state" style="display: none;">
+
+            <div class="empty-icon">
+                👥
+            </div>
+
+            <h3>
+                No applicants found
+            </h3>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PAGINATION ================= -->
+
+        <div id="applicantsPagination" class="pagination">
+
+            <button type="button" class="pagination-btn active">
+                1
+            </button>
+
+            <button type="button" class="pagination-btn">
+                2
+            </button>
+
+            <button type="button" class="pagination-btn">
+                3
+            </button>
+
+            <button type="button" class="pagination-btn">
+                Next →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    CareerHub
+                </strong>
+
+                <p>
+                    Connecting great companies with great talent.
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

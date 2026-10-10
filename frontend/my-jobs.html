@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Jobs - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark">C</span>
+
+                <span>CareerHub</span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html" class="active">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="interviews.html">
+                    Interviews
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="post-job.html" class="btn btn-primary">
+                    Post a Job
+                </a>
+
+                <a href="company-profile.html" class="user-avatar">
+                    TN
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="jobs-page employer-jobs-page">
+
+        <div class="container">
+
+
+            <!-- ================= PAGE HEADER ================= -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>
+                        My Jobs
+                    </h1>
+
+                    <p>
+                        Manage your job postings and track their performance.
+                    </p>
+
+                </div>
+
+
+                <a href="post-job.html" class="btn btn-primary">
+                    + Post a New Job
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Total Jobs
+                        </p>
+
+                        <h2 id="myJobsTotal">
+                            8
+                        </h2>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        💼
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Active
+                        </p>
+
+                        <h2 id="myJobsActive">
+                            6
+                        </h2>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Closed
+                        </p>
+
+                        <h2 id="myJobsClosed">
+                            2
+                        </h2>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        ⏸
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-content">
+
+                        <p class="stat-label">
+                            Total Applicants
+                        </p>
+
+                        <h2 id="myJobsApplicants">
+                            124
+                        </h2>
+
+                    </div>
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= JOB MANAGEMENT ================= -->
+
+            <section class="dashboard-section">
+
+
+                <!-- Controls -->
+
+                <div class="jobs-controls">
+
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            🔍
+                        </span>
+
+                        <input type="text" id="myJobsSearch" class="form-input" placeholder="Search your jobs...">
+
+                    </div>
+
+
+
+                    <!-- Status Filter -->
+
+                    <div class="filter-control">
+
+                        <label for="myJobsStatusFilter" class="sr-only">
+                            Job Status
+                        </label>
+
+                        <select id="myJobsStatusFilter" class="form-input">
+
+                            <option value="all">
+                                All Jobs
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="closed">
+                                Closed
+                            </option>
+
+                            <option value="draft">
+                                Draft
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Sort -->
+
+                    <div class="filter-control">
+
+                        <label for="myJobsSort" class="sr-only">
+                            Sort Jobs
+                        </label>
+
+                        <select id="myJobsSort" class="form-input">
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                            <option value="applicants">
+                                Most Applicants
+                            </option>
+
+                            <option value="views">
+                                Most Views
+                            </option>
+
+                            <option value="salary">
+                                Highest Salary
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Results Information -->
+
+                <div class="results-bar">
+
+                    <p>
+                        Showing
+                        <strong id="myJobsResultsCount">
+                            4
+                        </strong>
+                        jobs
+                    </p>
+
+                </div>
+
+
+
+                <!-- Jobs List -->
+
+                <div class="employer-jobs-list" id="myJobsList">
+
+
+                    <!-- ================= JOB 1 ================= -->
+
+                    <article class="employer-job-card my-job-card" data-job-id="frontend-developer" data-status="active"
+                        data-date="2026-09-18" data-applicants="32" data-views="1240" data-salary="12">
+
+                        <div class="employer-job-main">
+
+                            <div class="company-logo">
+                                TN
+                            </div>
+
+
+                            <div class="job-card-info">
+
+                                <h3>
+                                    Frontend Developer
+                                </h3>
+
+                                <p>
+                                    TechNova Solutions
+                                </p>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        📍 Bengaluru
+                                    </span>
+
+                                    <span>
+                                        Hybrid
+                                    </span>
+
+                                    <span>
+                                        Full-time
+                                    </span>
+
+                                    <span>
+                                        ₹8–12 LPA
+                                    </span>
+
+                                </div>
+
+
+                                <span class="job-status active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="employer-job-stats">
+
+                            <div>
+
+                                <strong>
+                                    32
+                                </strong>
+
+                                <span>
+                                    Applicants
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    1,240
+                                </strong>
+
+                                <span>
+                                    Views
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    6
+                                </strong>
+
+                                <span>
+                                    Shortlisted
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="job-card-actions">
+
+                            <a href="applicants.html" class="btn btn-outline">
+                                Applicants
+                            </a>
+
+                            <button type="button" class="btn btn-outline job-edit-btn" data-job-id="frontend-developer">
+                                Edit
+                            </button>
+
+                            <button type="button" class="btn btn-outline job-toggle-btn"
+                                data-job-id="frontend-developer">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ================= JOB 2 ================= -->
+
+                    <article class="employer-job-card my-job-card" data-job-id="java-backend-developer"
+                        data-status="active" data-date="2026-09-17" data-applicants="28" data-views="980"
+                        data-salary="15">
+
+                        <div class="employer-job-main">
+
+                            <div class="company-logo">
+                                DC
+                            </div>
+
+
+                            <div class="job-card-info">
+
+                                <h3>
+                                    Java Backend Developer
+                                </h3>
+
+                                <p>
+                                    DataCore Technologies
+                                </p>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        📍 Hyderabad
+                                    </span>
+
+                                    <span>
+                                        On-site
+                                    </span>
+
+                                    <span>
+                                        Full-time
+                                    </span>
+
+                                    <span>
+                                        ₹10–15 LPA
+                                    </span>
+
+                                </div>
+
+
+                                <span class="job-status active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="employer-job-stats">
+
+                            <div>
+
+                                <strong>
+                                    28
+                                </strong>
+
+                                <span>
+                                    Applicants
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    980
+                                </strong>
+
+                                <span>
+                                    Views
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    5
+                                </strong>
+
+                                <span>
+                                    Shortlisted
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="job-card-actions">
+
+                            <a href="applicants.html" class="btn btn-outline">
+                                Applicants
+                            </a>
+
+                            <button type="button" class="btn btn-outline job-edit-btn"
+                                data-job-id="java-backend-developer">
+                                Edit
+                            </button>
+
+                            <button type="button" class="btn btn-outline job-toggle-btn"
+                                data-job-id="java-backend-developer">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ================= JOB 3 ================= -->
+
+                    <article class="employer-job-card my-job-card" data-job-id="software-engineer" data-status="active"
+                        data-date="2026-09-15" data-applicants="21" data-views="760" data-salary="16">
+
+                        <div class="employer-job-main">
+
+                            <div class="company-logo">
+                                CW
+                            </div>
+
+
+                            <div class="job-card-info">
+
+                                <h3>
+                                    Software Engineer
+                                </h3>
+
+                                <p>
+                                    CloudWorks
+                                </p>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        📍 Pune
+                                    </span>
+
+                                    <span>
+                                        Hybrid
+                                    </span>
+
+                                    <span>
+                                        Full-time
+                                    </span>
+
+                                    <span>
+                                        ₹10–16 LPA
+                                    </span>
+
+                                </div>
+
+
+                                <span class="job-status active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="employer-job-stats">
+
+                            <div>
+
+                                <strong>
+                                    21
+                                </strong>
+
+                                <span>
+                                    Applicants
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    760
+                                </strong>
+
+                                <span>
+                                    Views
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    4
+                                </strong>
+
+                                <span>
+                                    Shortlisted
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="job-card-actions">
+
+                            <a href="applicants.html" class="btn btn-outline">
+                                Applicants
+                            </a>
+
+                            <button type="button" class="btn btn-outline job-edit-btn" data-job-id="software-engineer">
+                                Edit
+                            </button>
+
+                            <button type="button" class="btn btn-outline job-toggle-btn"
+                                data-job-id="software-engineer">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ================= JOB 4 ================= -->
+
+                    <article class="employer-job-card my-job-card" data-job-id="product-designer" data-status="closed"
+                        data-date="2026-09-05" data-applicants="43" data-views="1850" data-salary="11">
+
+                        <div class="employer-job-main">
+
+                            <div class="company-logo">
+                                FE
+                            </div>
+
+
+                            <div class="job-card-info">
+
+                                <h3>
+                                    Product Designer
+                                </h3>
+
+                                <p>
+                                    FinEdge
+                                </p>
+
+                                <div class="job-meta">
+
+                                    <span>
+                                        📍 Mumbai
+                                    </span>
+
+                                    <span>
+                                        Hybrid
+                                    </span>
+
+                                    <span>
+                                        Full-time
+                                    </span>
+
+                                    <span>
+                                        ₹7–11 LPA
+                                    </span>
+
+                                </div>
+
+
+                                <span class="job-status closed">
+                                    Closed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="employer-job-stats">
+
+                            <div>
+
+                                <strong>
+                                    43
+                                </strong>
+
+                                <span>
+                                    Applicants
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    1,850
+                                </strong>
+
+                                <span>
+                                    Views
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    8
+                                </strong>
+
+                                <span>
+                                    Shortlisted
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="job-card-actions">
+
+                            <a href="applicants.html" class="btn btn-outline">
+                                Applicants
+                            </a>
+
+                            <button type="button" class="btn btn-outline job-edit-btn" data-job-id="product-designer">
+                                Edit
+                            </button>
+
+                            <button type="button" class="btn btn-outline job-toggle-btn" data-job-id="product-designer">
+                                Reopen
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- Empty State -->
+
+                <div id="myJobsEmpty" class="empty-state" style="display: none;">
+
+                    <h3>
+                        No jobs found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filter.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= PAGINATION ================= -->
+
+                <div class="pagination" id="myJobsPagination">
+
+                    <button type="button" class="pagination-btn active">
+                        1
+                    </button>
+
+                    <button type="button" class="pagination-btn">
+                        2
+                    </button>
+
+                    <button type="button" class="pagination-btn">
+                        3
+                    </button>
+
+                    <button type="button" class="pagination-btn">
+                        Next →
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="brand footer-brand">
+
+                    <span class="brand-mark">
+                        C
+                    </span>
+
+                    <span>
+                        CareerHub
+                    </span>
+
+                </div>
+
+                <p>
+                    Connecting talented people with meaningful opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="company-profile.html">
+                    Company Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Main JavaScript -->
+
+    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

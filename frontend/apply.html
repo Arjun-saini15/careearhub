@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for Frontend Developer — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">C</span>
+
+                <span>CareerHub</span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="jobs.html">Find Jobs</a>
+
+                <a href="#">Companies</a>
+
+                <a href="#">Career Resources</a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="login.html" class="btn btn-secondary">
+                    Log in
+                </a>
+
+                <a href="register.html" class="btn btn-primary">
+                    Sign up
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- APPLICATION PAGE -->
+    <!-- ============================= -->
+
+    <main class="section apply-page">
+
+        <div class="container">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="apply-page-header">
+
+                <a href="job-details.html" class="back-link">
+                    ← Back to job details
+                </a>
+
+                <h1>
+                    Apply for Frontend Developer
+                </h1>
+
+                <p>
+                    TechNova · Bengaluru · Full-time
+                </p>
+
+            </div>
+
+
+
+            <div class="apply-layout">
+
+
+                <!-- ============================= -->
+                <!-- APPLICATION FORM -->
+                <!-- ============================= -->
+
+                <section class="application-card">
+
+                    <div class="card-heading">
+
+                        <h2>
+                            Your application
+                        </h2>
+
+                        <p>
+                            Fill in your details to submit your application.
+                        </p>
+
+                    </div>
+
+
+                    <form id="applicationForm">
+
+
+                        <!-- ============================= -->
+                        <!-- PERSONAL INFORMATION -->
+                        <!-- ============================= -->
+
+                        <div class="form-section">
+
+                            <h3>
+                                Personal information
+                            </h3>
+
+
+                            <div class="form-row">
+
+
+                                <div class="form-group">
+
+                                    <label for="firstName" class="form-label">
+
+                                        First name
+
+                                    </label>
+
+                                    <input type="text" id="firstName" name="firstName" class="form-input"
+                                        placeholder="Enter first name" required>
+
+                                </div>
+
+
+
+                                <div class="form-group">
+
+                                    <label for="lastName" class="form-label">
+
+                                        Last name
+
+                                    </label>
+
+                                    <input type="text" id="lastName" name="lastName" class="form-input"
+                                        placeholder="Enter last name" required>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="email" class="form-label">
+
+                                    Email address
+
+                                </label>
+
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="Enter your email" required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="phone" class="form-label">
+
+                                    Phone number
+
+                                </label>
+
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    placeholder="Enter your phone number" required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="location" class="form-label">
+
+                                    Current location
+
+                                </label>
+
+                                <input type="text" id="location" name="location" class="form-input"
+                                    placeholder="City, State" required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ============================= -->
+                        <!-- PROFESSIONAL INFORMATION -->
+                        <!-- ============================= -->
+
+                        <div class="form-section">
+
+                            <h3>
+                                Professional information
+                            </h3>
+
+
+                            <!-- RESUME -->
+
+                            <div class="form-group">
+
+                                <label for="resume" class="form-label">
+
+                                    Resume
+
+                                </label>
+
+
+                                <div class="resume-upload">
+
+                                    <input type="file" id="applicationResume" name="resume" accept=".pdf,.doc,.docx"
+                                        required>
+
+                                    <label for="applicationResume" class="upload-box">
+
+                                        <span class="upload-icon">
+                                            ↑
+                                        </span>
+
+                                        <strong>
+                                            Upload your resume
+                                        </strong>
+
+                                        <span id="resumeText">
+                                            PDF, DOC or DOCX · Max 5 MB
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PORTFOLIO -->
+
+                            <div class="form-group">
+
+                                <label for="portfolio" class="form-label">
+
+                                    Portfolio URL
+
+                                </label>
+
+                                <input type="url" id="portfolio" name="portfolio" class="form-input"
+                                    placeholder="https://yourportfolio.com">
+
+                            </div>
+
+
+
+                            <!-- LINKEDIN -->
+
+                            <div class="form-group">
+
+                                <label for="linkedin" class="form-label">
+
+                                    LinkedIn profile
+
+                                </label>
+
+                                <input type="url" id="linkedin" name="linkedin" class="form-input"
+                                    placeholder="https://linkedin.com/in/yourname">
+
+                            </div>
+
+
+
+                            <!-- COVER LETTER -->
+
+                            <div class="form-group">
+
+                                <label for="coverLetter" class="form-label">
+
+                                    Cover letter
+
+                                </label>
+
+                                <textarea id="coverLetter" name="coverLetter" class="form-input form-textarea" rows="7"
+                                    placeholder="Tell the employer why you are a good fit for this role..."
+                                    required></textarea>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ============================= -->
+                        <!-- ADDITIONAL INFORMATION -->
+                        <!-- ============================= -->
+
+                        <div class="form-section">
+
+                            <h3>
+                                Additional information
+                            </h3>
+
+
+                            <!-- EXPERIENCE -->
+
+                            <div class="form-group">
+
+                                <label for="experience" class="form-label">
+
+                                    Years of experience
+
+                                </label>
+
+                                <select id="experience" name="experience" class="form-input" required>
+
+                                    <option value="">
+                                        Select experience
+                                    </option>
+
+                                    <option value="Fresher">
+                                        Fresher
+                                    </option>
+
+                                    <option value="1 year">
+                                        1 year
+                                    </option>
+
+                                    <option value="2 years">
+                                        2 years
+                                    </option>
+
+                                    <option value="3-5 years">
+                                        3–5 years
+                                    </option>
+
+                                    <option value="5+ years">
+                                        5+ years
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- NOTICE PERIOD -->
+
+                            <div class="form-group">
+
+                                <label for="noticePeriod" class="form-label">
+
+                                    Notice period
+
+                                </label>
+
+                                <select id="noticePeriod" name="noticePeriod" class="form-input" required>
+
+                                    <option value="">
+                                        Select notice period
+                                    </option>
+
+                                    <option value="Immediately">
+                                        Immediately
+                                    </option>
+
+                                    <option value="15 days">
+                                        15 days
+                                    </option>
+
+                                    <option value="30 days">
+                                        30 days
+                                    </option>
+
+                                    <option value="60 days">
+                                        60 days
+                                    </option>
+
+                                    <option value="90 days">
+                                        90 days
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ============================= -->
+                        <!-- TERMS -->
+                        <!-- ============================= -->
+
+                        <label class="application-terms">
+
+                            <input type="checkbox" id="applicationTerms" name="terms" required>
+
+                            <span>
+                                I confirm that the information provided in
+                                this application is accurate and complete.
+                            </span>
+
+                        </label>
+
+
+
+                        <!-- ============================= -->
+                        <!-- ERROR MESSAGE -->
+                        <!-- ============================= -->
+
+                        <div id="applicationError" class="form-error" style="display: none;">
+
+                        </div>
+
+
+
+                        <!-- ============================= -->
+                        <!-- SUBMIT BUTTON -->
+                        <!-- ============================= -->
+
+                        <button type="submit" class="btn btn-primary btn-full btn-large">
+
+                            Submit application
+
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- ============================= -->
+                    <!-- SUCCESS MESSAGE -->
+                    <!-- ============================= -->
+
+                    <div id="applicationSuccess" class="application-success" style="display: none;">
+
+                        <h3>
+                            Application submitted successfully!
+                        </h3>
+
+                        <p>
+                            Your application for Frontend Developer at
+                            TechNova has been submitted.
+                        </p>
+
+                        <a href="jobs.html" class="btn btn-primary">
+
+                            Browse more jobs
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ============================= -->
+                <!-- JOB SUMMARY -->
+                <!-- ============================= -->
+
+                <aside class="application-sidebar">
+
+
+                    <!-- JOB SUMMARY -->
+
+                    <div class="application-summary">
+
+                        <h2>
+                            Job summary
+                        </h2>
+
+
+                        <div class="summary-company">
+
+                            <div class="summary-logo">
+                                T
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Frontend Developer
+                                </strong>
+
+                                <span>
+                                    TechNova
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="summary-details">
+
+                            <div>
+                                📍 Bengaluru, India
+                            </div>
+
+                            <div>
+                                💼 Full-time
+                            </div>
+
+                            <div>
+                                ₹8–12 LPA
+                            </div>
+
+                            <div>
+                                Hybrid
+                            </div>
+
+                        </div>
+
+
+
+                        <a href="job-details.html" class="summary-link">
+
+                            View full job description →
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- APPLICATION TIPS -->
+
+                    <div class="application-help">
+
+                        <h3>
+                            Application tips
+                        </h3>
+
+
+                        <ul>
+
+                            <li>
+                                Keep your resume updated.
+                            </li>
+
+                            <li>
+                                Highlight skills relevant to the job.
+                            </li>
+
+                            <li>
+                                Review your application before submitting.
+                            </li>
+
+                            <li>
+                                Make sure your contact details are correct.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Built for modern hiring.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

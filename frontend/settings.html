@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CareerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+                <span class="brand-mark">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="jobs.html">Find Jobs</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="applications.html">Applications</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="profile.html" class="user-avatar">AS</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Settings Page -->
+    <main class="settings-page">
+
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h1>Account Settings</h1>
+                    <p>
+                        Manage your account, preferences and privacy settings.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="settings-layout">
+
+                <!-- Settings Sidebar -->
+                <aside class="settings-sidebar">
+
+                    <a href="#account" class="settings-nav-item active" data-section="account">
+                        Account
+                    </a>
+
+                    <a href="#notifications" class="settings-nav-item" data-section="notifications">
+                        Notifications
+                    </a>
+
+                    <a href="#preferences" class="settings-nav-item" data-section="preferences">
+                        Job Preferences
+                    </a>
+
+                    <a href="#privacy" class="settings-nav-item" data-section="privacy">
+                        Privacy & Security
+                    </a>
+
+                </aside>
+
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+
+
+                    <!-- ================= ACCOUNT ================= -->
+
+                    <section class="settings-card settings-section" id="settings-account">
+
+                        <div class="settings-card-header">
+                            <div>
+                                <h2>Account Information</h2>
+                                <p>
+                                    Update your basic account information.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    First Name
+                                </label>
+
+                                <input type="text" id="settingsFirstName" class="form-input" value="Arjun">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Last Name
+                                </label>
+
+                                <input type="text" id="settingsLastName" class="form-input" value="Saini">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label class="form-label">
+                                Email Address
+                            </label>
+
+                            <input type="email" id="settingsEmail" class="form-input" value="arjun@example.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" id="settingsPhone" class="form-input"
+                                placeholder="Enter your phone number">
+
+                        </div>
+
+
+                        <div class="settings-actions">
+
+                            <button type="button" class="btn btn-primary" id="saveAccountSettings">
+                                Save Account
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ================= NOTIFICATIONS ================= -->
+
+                    <section class="settings-card settings-section" id="settings-notifications">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <h2>Notifications</h2>
+
+                                <p>
+                                    Choose which notifications you want to receive.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Job Recommendations -->
+                        <div class="setting-option">
+
+                            <div>
+                                <h3>Job Recommendations</h3>
+
+                                <p>
+                                    Receive job recommendations based on your profile.
+                                </p>
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="jobRecommendationToggle" checked>
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Application Updates -->
+                        <div class="setting-option">
+
+                            <div>
+                                <h3>Application Updates</h3>
+
+                                <p>
+                                    Get notified when your application status changes.
+                                </p>
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="applicationUpdateToggle" checked>
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- New Job Alerts -->
+                        <div class="setting-option">
+
+                            <div>
+                                <h3>New Job Alerts</h3>
+
+                                <p>
+                                    Receive alerts when new jobs match your preferences.
+                                </p>
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="interviewReminderToggle" checked>
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Career Tips -->
+                        <div class="setting-option">
+
+                            <div>
+                                <h3>Career Tips & Updates</h3>
+
+                                <p>
+                                    Receive useful career tips and platform updates.
+                                </p>
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="newsletterToggle">
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="settings-actions">
+
+                            <button type="button" class="btn btn-primary" id="saveNotificationSettings">
+                                Save Notification Settings
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ================= JOB PREFERENCES ================= -->
+
+                    <section class="settings-card settings-section" id="settings-preferences">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <h2>Job Preferences</h2>
+
+                                <p>
+                                    Tell us what kind of opportunities you're looking for.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Preferred Job Title -->
+                        <div class="form-group">
+
+                            <label class="form-label">
+                                Preferred Job Title
+                            </label>
+
+                            <input type="text" id="preferredJobTitle" class="form-input" value="Software Developer">
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <!-- Location -->
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Preferred Location
+                                </label>
+
+                                <select id="preferredLocation" class="form-input">
+
+                                    <option>Delhi NCR</option>
+                                    <option>Bangalore</option>
+                                    <option>Hyderabad</option>
+                                    <option>Pune</option>
+                                    <option>Mumbai</option>
+                                    <option>Remote</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Experience -->
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Experience Level
+                                </label>
+
+                                <select id="experienceLevel" class="form-input">
+
+                                    <option>Fresher</option>
+                                    <option>0-1 Years</option>
+                                    <option>1-3 Years</option>
+                                    <option>3-5 Years</option>
+                                    <option>5+ Years</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Work Mode -->
+                        <div class="form-group">
+
+                            <label class="form-label">
+                                Preferred Work Mode
+                            </label>
+
+
+                            <div class="preference-options">
+
+                                <label class="preference-option">
+
+                                    <input type="checkbox" id="workModeOnsite" checked>
+
+                                    <span>On-site</span>
+
+                                </label>
+
+
+                                <label class="preference-option">
+
+                                    <input type="checkbox" id="workModeHybrid" checked>
+
+                                    <span>Hybrid</span>
+
+                                </label>
+
+
+                                <label class="preference-option">
+
+                                    <input type="checkbox" id="workModeRemote">
+
+                                    <span>Remote</span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-actions">
+
+                            <button type="button" class="btn btn-primary" id="saveJobPreferences">
+                                Save Job Preferences
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ================= PRIVACY & SECURITY ================= -->
+
+                    <section class="settings-card settings-section" id="settings-privacy">
+
+                        <div class="settings-card-header">
+
+                            <div>
+                                <h2>Privacy & Security</h2>
+
+                                <p>
+                                    Manage your privacy and account security.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Change Password -->
+                        <div class="security-row">
+
+                            <div>
+
+                                <h3>Password</h3>
+
+                                <p>
+                                    Change your account password regularly
+                                    to keep your account secure.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" class="btn btn-outline" id="changePasswordBtn">
+                                Change Password
+                            </button>
+
+                        </div>
+
+
+                        <!-- Profile Visibility -->
+                        <div class="setting-option">
+
+                            <div>
+
+                                <h3>Profile Visibility</h3>
+
+                                <p>
+                                    Allow employers to discover your profile.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="publicProfileToggle" checked>
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Resume Visibility -->
+                        <div class="setting-option">
+
+                            <div>
+
+                                <h3>Resume Visibility</h3>
+
+                                <p>
+                                    Allow employers to view your uploaded resume.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input type="checkbox" id="showResumeToggle" checked>
+
+                                <span class="toggle-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Password Form -->
+                        <div class="password-form" id="passwordForm">
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Current Password
+                                </label>
+
+                                <input type="password" id="currentPassword" class="form-input"
+                                    placeholder="Enter current password">
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        New Password
+                                    </label>
+
+                                    <input type="password" id="newPassword" class="form-input"
+                                        placeholder="Enter new password">
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label class="form-label">
+                                        Confirm Password
+                                    </label>
+
+                                    <input type="password" id="confirmPassword" class="form-input"
+                                        placeholder="Confirm new password">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-actions">
+
+                            <button type="button" class="btn btn-primary" id="savePrivacySettings">
+                                Save Privacy Settings
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ================= DANGER ZONE ================= -->
+
+                    <section class="settings-card danger-zone">
+
+                        <div class="settings-card-header">
+
+                            <div>
+
+                                <h2>Danger Zone</h2>
+
+                                <p>
+                                    These actions can affect your account permanently.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="security-row">
+
+                            <div>
+
+                                <h3>Delete Account</h3>
+
+                                <p>
+                                    Permanently delete your CareerHub account
+                                    and associated data.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" class="btn btn-danger-outline" id="deleteAccountBtn">
+                                Delete Account
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ================= LOGOUT ================= -->
+
+                    <section class="settings-card">
+
+                        <div class="security-row">
+
+                            <div>
+
+                                <h3>Logout</h3>
+
+                                <p>
+                                    Sign out from your CareerHub account.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" class="btn btn-outline" id="logoutBtn">
+                                Logout
+                            </button>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <div class="brand footer-brand">
+
+                    <span class="brand-mark">C</span>
+
+                    <span>CareerHub</span>
+
+                </div>
+
+                <p>
+                    Connecting talented people with meaningful opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="jobs.html">Find Jobs</a>
+
+                <a href="profile.html">Profile</a>
+
+                <a href="applications.html">Applications</a>
+
+                <a href="settings.html">Settings</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

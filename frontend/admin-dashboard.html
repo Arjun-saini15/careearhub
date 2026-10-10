@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CareerHub administrator dashboard.">
+
+    <title>Admin Dashboard — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <!-- BRAND -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    C
+                </span>
+
+                <span>
+                    CareerHub
+                </span>
+
+            </a>
+
+
+            <!-- ADMIN NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="admin-dashboard.html" class="active">
+                    Dashboard
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <a href="jobs-management.html">
+                    Jobs
+                </a>
+
+                <a href="companies.html">
+                    Companies
+                </a>
+
+                <a href="applications-management.html">
+                    Applications
+                </a>
+
+            </nav>
+
+
+            <!-- ADMIN ACTION -->
+
+            <div class="nav-actions">
+
+                <a href="analytics.html" class="btn btn-primary">
+
+                    Analytics
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="section">
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+                 ================================================= -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <p class="page-eyebrow">
+                        Administration
+                    </p>
+
+                    <h1>
+                        Admin Dashboard
+                    </h1>
+
+                    <p>
+                        Monitor users, jobs, companies and applications
+                        across the CareerHub platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PLATFORM STATISTICS
+                 ================================================= -->
+
+            <section class="dashboard-stats">
+
+
+                <!-- TOTAL USERS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Total Users
+                    </span>
+
+                    <strong id="adminTotalUsers">
+                        8,426
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Registered users
+                    </span>
+
+                </div>
+
+
+                <!-- JOB SEEKERS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Job Seekers
+                    </span>
+
+                    <strong id="adminJobSeekers">
+                        7,218
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Active candidates
+                    </span>
+
+                </div>
+
+
+                <!-- EMPLOYERS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Employers
+                    </span>
+
+                    <strong id="adminEmployers">
+                        1,208
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Registered employers
+                    </span>
+
+                </div>
+
+
+                <!-- TOTAL JOBS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Total Jobs
+                    </span>
+
+                    <strong id="adminTotalJobs">
+                        12,480
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Jobs posted
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECONDARY STATISTICS
+                 ================================================= -->
+
+            <section class="dashboard-stats" style="margin-top:20px;">
+
+
+                <!-- ACTIVE JOBS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Active Jobs
+                    </span>
+
+                    <strong id="adminActiveJobs">
+                        8,942
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Currently available
+                    </span>
+
+                </div>
+
+
+                <!-- COMPANIES -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Companies
+                    </span>
+
+                    <strong id="adminCompanies">
+                        1,084
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Verified companies
+                    </span>
+
+                </div>
+
+
+                <!-- APPLICATIONS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Applications
+                    </span>
+
+                    <strong id="adminApplications">
+                        38,642
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Total applications
+                    </span>
+
+                </div>
+
+
+                <!-- HIRED -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Successful Hires
+                    </span>
+
+                    <strong id="adminHired">
+                        2,416
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Candidates hired
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+                 ================================================= -->
+
+            <section class="dashboard-section" style="margin-top:32px;">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <p>
+                                Manage important areas of the platform.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div style="
+                            display:grid;
+                            grid-template-columns:
+                                repeat(auto-fit, minmax(200px, 1fr));
+                            gap:16px;
+                        ">
+
+
+                        <!-- USERS -->
+
+                        <a href="users.html" class="quick-action-card">
+
+                            <span class="quick-action-icon">
+                                👥
+                            </span>
+
+                            <strong>
+                                Manage Users
+                            </strong>
+
+                            <span>
+                                View and manage registered users.
+                            </span>
+
+                        </a>
+
+
+                        <!-- JOBS -->
+
+                        <a href="jobs-management.html" class="quick-action-card">
+
+                            <span class="quick-action-icon">
+                                💼
+                            </span>
+
+                            <strong>
+                                Manage Jobs
+                            </strong>
+
+                            <span>
+                                Review and manage posted jobs.
+                            </span>
+
+                        </a>
+
+
+                        <!-- COMPANIES -->
+
+                        <a href="companies.html" class="quick-action-card">
+
+                            <span class="quick-action-icon">
+                                🏢
+                            </span>
+
+                            <strong>
+                                Companies
+                            </strong>
+
+                            <span>
+                                Review registered companies.
+                            </span>
+
+                        </a>
+
+
+                        <!-- APPLICATIONS -->
+
+                        <a href="applications-management.html" class="quick-action-card">
+
+                            <span class="quick-action-icon">
+                                📄
+                            </span>
+
+                            <strong>
+                                Applications
+                            </strong>
+
+                            <span>
+                                Monitor job applications.
+                            </span>
+
+                        </a>
+
+
+                        <!-- ANALYTICS -->
+
+                        <a href="analytics.html" class="quick-action-card">
+
+                            <span class="quick-action-icon">
+                                📊
+                            </span>
+
+                            <strong>
+                                Analytics
+                            </strong>
+
+                            <span>
+                                View platform statistics.
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT ACTIVITY
+                 ================================================= -->
+
+            <section style="
+                    display:grid;
+                    grid-template-columns:
+                        minmax(0, 1.4fr)
+                        minmax(0, 1fr);
+                    gap:24px;
+                    margin-top:24px;
+                ">
+
+
+                <!-- =============================================
+                     RECENT USERS
+                     ============================================= -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Users
+                            </h2>
+
+                            <p>
+                                Latest registrations on CareerHub.
+                            </p>
+
+                        </div>
+
+                        <a href="users.html" class="btn btn-secondary">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper" style="overflow-x:auto;">
+
+                        <table class="data-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Role
+                                    </th>
+
+                                    <th>
+                                        Joined
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="adminRecentUsers">
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Rahul Sharma
+                                        </strong>
+
+                                        <br>
+
+                                        <small>
+                                            rahul@example.com
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Job Seeker
+                                    </td>
+
+                                    <td>
+                                        Today
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Priya Verma
+                                        </strong>
+
+                                        <br>
+
+                                        <small>
+                                            priya@example.com
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Job Seeker
+                                    </td>
+
+                                    <td>
+                                        Today
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            TechNova Pvt. Ltd.
+                                        </strong>
+
+                                        <br>
+
+                                        <small>
+                                            hr@technova.com
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Employer
+                                    </td>
+
+                                    <td>
+                                        Yesterday
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Aman Gupta
+                                        </strong>
+
+                                        <br>
+
+                                        <small>
+                                            aman@example.com
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Job Seeker
+                                    </td>
+
+                                    <td>
+                                        Yesterday
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     SYSTEM STATUS
+                     ============================================= -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                System Status
+                            </h2>
+
+                            <p>
+                                Current platform status.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATUS ITEMS -->
+
+                    <div style="
+                        display:flex;
+                        flex-direction:column;
+                        gap:18px;
+                    ">
+
+
+                        <!-- API -->
+
+                        <div style="
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            gap:12px;
+                        ">
+
+                            <div>
+
+                                <strong>
+                                    Platform
+                                </strong>
+
+                                <p style="margin:4px 0 0;">
+                                    CareerHub platform
+                                </p>
+
+                            </div>
+
+                            <span class="status-badge status-active">
+                                Operational
+                            </span>
+
+                        </div>
+
+
+                        <!-- DATABASE -->
+
+                        <div style="
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            gap:12px;
+                        ">
+
+                            <div>
+
+                                <strong>
+                                    Database
+                                </strong>
+
+                                <p style="margin:4px 0 0;">
+                                    MySQL database
+                                </p>
+
+                            </div>
+
+                            <span class="status-badge status-active">
+                                Connected
+                            </span>
+
+                        </div>
+
+
+                        <!-- API -->
+
+                        <div style="
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            gap:12px;
+                        ">
+
+                            <div>
+
+                                <strong>
+                                    REST API
+                                </strong>
+
+                                <p style="margin:4px 0 0;">
+                                    Backend services
+                                </p>
+
+                            </div>
+
+                            <span class="status-badge status-active">
+                                Running
+                            </span>
+
+                        </div>
+
+
+                        <!-- AUTH -->
+
+                        <div style="
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            gap:12px;
+                        ">
+
+                            <div>
+
+                                <strong>
+                                    Authentication
+                                </strong>
+
+                                <p style="margin:4px 0 0;">
+                                    JWT authentication
+                                </p>
+
+                            </div>
+
+                            <span class="status-badge status-active">
+                                Enabled
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT JOBS
+                 ================================================= -->
+
+            <section class="dashboard-section" style="margin-top:24px;">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Job Activity
+                            </h2>
+
+                            <p>
+                                Recently posted jobs on the platform.
+                            </p>
+
+                        </div>
+
+                        <a href="jobs-management.html" class="btn btn-secondary">
+                            Manage Jobs
+                        </a>
+
+                    </div>
+
+
+                    <div id="adminRecentJobs" class="dashboard-job-grid">
+
+
+                        <!-- JOB 1 -->
+
+                        <article class="dashboard-job-card">
+
+                            <div>
+
+                                <h3>
+                                    Frontend Developer
+                                </h3>
+
+                                <p>
+                                    TechNova Pvt. Ltd.
+                                </p>
+
+                                <p>
+                                    Noida · Full-time
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <span class="status-badge status-active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- JOB 2 -->
+
+                        <article class="dashboard-job-card">
+
+                            <div>
+
+                                <h3>
+                                    Java Backend Developer
+                                </h3>
+
+                                <p>
+                                    CloudWorks
+                                </p>
+
+                                <p>
+                                    Noida · Full-time
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <span class="status-badge status-active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- JOB 3 -->
+
+                        <article class="dashboard-job-card">
+
+                            <div>
+
+                                <h3>
+                                    UI/UX Designer
+                                </h3>
+
+                                <p>
+                                    DesignStudio
+                                </p>
+
+                                <p>
+                                    Remote · Full-time
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <span class="status-badge status-active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- JOB 4 -->
+
+                        <article class="dashboard-job-card">
+
+                            <div>
+
+                                <h3>
+                                    Data Analyst
+                                </h3>
+
+                                <p>
+                                    DataSphere
+                                </p>
+
+                                <p>
+                                    Gurugram · Full-time
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <span class="status-badge status-active">
+                                    Active
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-top">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            C
+                        </span>
+
+                        <span>
+                            CareerHub
+                        </span>
+
+                    </a>
+
+                    <p>
+                        A modern platform connecting talented people
+                        with companies building the future.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ADMIN -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Administration
+                    </h4>
+
+                    <a href="admin-dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="users.html">
+                        Users
+                    </a>
+
+                    <a href="jobs-management.html">
+                        Jobs
+                    </a>
+
+                    <a href="companies.html">
+                        Companies
+                    </a>
+
+                </div>
+
+
+
+                <!-- MANAGEMENT -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Management
+                    </h4>
+
+                    <a href="applications-management.html">
+                        Applications
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="#">
+                        Reports
+                    </a>
+
+                    <a href="#">
+                        Settings
+                    </a>
+
+                </div>
+
+
+
+                <!-- PLATFORM -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="jobs.html">
+                        Find Jobs
+                    </a>
+
+                    <a href="employer-dashboard.html">
+                        Employer Portal
+                    </a>
+
+                    <a href="profile.html">
+                        Job Seeker Portal
+                    </a>
+
+                    <a href="#">
+                        Help Center
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Administration Panel
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+    <script src="admin-dashboard.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interviews | CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand">
+                <span class="brand-logo">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="interviews.html" class="active">
+                    Interviews
+                </a>
+
+                <a href="post-job.html" class="nav-post-job">
+                    Post a Job
+                </a>
+
+            </nav>
+
+            <div class="nav-user">
+                <div class="user-avatar">
+                    AS
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="page-container">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="page-eyebrow">
+                    INTERVIEW MANAGEMENT
+                </p>
+
+                <h1>
+                    Interviews
+                </h1>
+
+                <p>
+                    Schedule, manage and track candidate interviews.
+                </p>
+
+            </div>
+
+            <a href="applicants.html" class="primary-btn">
+                View Applicants
+            </a>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Total Interviews
+                    </span>
+
+                    <strong id="interviewsTotal">
+                        16
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    ⏰
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Upcoming
+                    </span>
+
+                    <strong id="interviewsUpcoming">
+                        8
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Completed
+                    </span>
+
+                    <strong id="interviewsCompleted">
+                        6
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-card-icon">
+                    ✕
+                </div>
+
+                <div>
+
+                    <span class="stat-label">
+                        Cancelled
+                    </span>
+
+                    <strong id="interviewsCancelled">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TOOLBAR ================= -->
+
+        <section class="content-card applicants-toolbar">
+
+            <div class="toolbar-search">
+
+                <label for="interviewSearch">
+                    Search
+                </label>
+
+                <input type="search" id="interviewSearch" placeholder="Search candidate or job...">
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="interviewStatusFilter">
+                    Status
+                </label>
+
+                <select id="interviewStatusFilter">
+
+                    <option value="all">
+                        All Interviews
+                    </option>
+
+                    <option value="upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="interviewTypeFilter">
+                    Interview Type
+                </label>
+
+                <select id="interviewTypeFilter">
+
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="video">
+                        Video Call
+                    </option>
+
+                    <option value="phone">
+                        Phone
+                    </option>
+
+                    <option value="onsite">
+                        On-site
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-filter">
+
+                <label for="interviewSort">
+                    Sort
+                </label>
+
+                <select id="interviewSort">
+
+                    <option value="soonest">
+                        Soonest
+                    </option>
+
+                    <option value="latest">
+                        Latest
+                    </option>
+
+                    <option value="candidate">
+                        Candidate Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= UPCOMING ================= -->
+
+        <section class="section-heading">
+
+            <div>
+
+                <h2>
+                    Upcoming Interviews
+                </h2>
+
+                <p id="interviewResultsCount">
+                    Showing 5 interviews
+                </p>
+
+            </div>
+
+            <button type="button" class="secondary-btn" id="scheduleInterviewBtn">
+                + Schedule Interview
+            </button>
+
+        </section>
+
+
+        <!-- ================= INTERVIEW LIST ================= -->
+
+        <section id="interviewsList" class="interviews-list">
+
+
+            <!-- Interview 1 -->
+
+            <article class="interview-card" data-interview-id="1" data-status="upcoming" data-type="video"
+                data-date="2026-09-22T10:30" data-candidate="Aman Gupta">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        22
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Aman Gupta
+                        </h3>
+
+                        <span class="status-badge interview">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Software Engineer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 22 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 10:30 AM
+                        </span>
+
+                        <span>
+                            💻 Video Call
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="1">
+                        View
+                    </button>
+
+                    <button type="button" class="reschedule-interview-btn" data-interview-id="1">
+                        Reschedule
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 2 -->
+
+            <article class="interview-card" data-interview-id="2" data-status="upcoming" data-type="video"
+                data-date="2026-09-23T14:00" data-candidate="Priya Verma">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        23
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Priya Verma
+                        </h3>
+
+                        <span class="status-badge interview">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Java Backend Developer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 23 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 2:00 PM
+                        </span>
+
+                        <span>
+                            💻 Video Call
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="2">
+                        View
+                    </button>
+
+                    <button type="button" class="reschedule-interview-btn" data-interview-id="2">
+                        Reschedule
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 3 -->
+
+            <article class="interview-card" data-interview-id="3" data-status="upcoming" data-type="onsite"
+                data-date="2026-09-24T11:00" data-candidate="Neha Kapoor">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        24
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Neha Kapoor
+                        </h3>
+
+                        <span class="status-badge interview">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Product Designer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 24 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 11:00 AM
+                        </span>
+
+                        <span>
+                            🏢 On-site
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="3">
+                        View
+                    </button>
+
+                    <button type="button" class="reschedule-interview-btn" data-interview-id="3">
+                        Reschedule
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 4 -->
+
+            <article class="interview-card" data-interview-id="4" data-status="upcoming" data-type="phone"
+                data-date="2026-09-25T16:00" data-candidate="Karan Mehta">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        25
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Karan Mehta
+                        </h3>
+
+                        <span class="status-badge interview">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Frontend Developer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 25 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 4:00 PM
+                        </span>
+
+                        <span>
+                            📞 Phone
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="4">
+                        View
+                    </button>
+
+                    <button type="button" class="reschedule-interview-btn" data-interview-id="4">
+                        Reschedule
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 5 -->
+
+            <article class="interview-card" data-interview-id="5" data-status="upcoming" data-type="video"
+                data-date="2026-09-27T12:30" data-candidate="Rahul Sharma">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        27
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Rahul Sharma
+                        </h3>
+
+                        <span class="status-badge interview">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Frontend Developer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 27 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 12:30 PM
+                        </span>
+
+                        <span>
+                            💻 Video Call
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="5">
+                        View
+                    </button>
+
+                    <button type="button" class="reschedule-interview-btn" data-interview-id="5">
+                        Reschedule
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 6 -->
+
+            <article class="interview-card" data-interview-id="6" data-status="completed" data-type="video"
+                data-date="2026-09-15T15:00" data-candidate="Riya Sharma">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        15
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Riya Sharma
+                        </h3>
+
+                        <span class="status-badge shortlisted">
+                            Completed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Backend Developer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 15 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 3:00 PM
+                        </span>
+
+                        <span>
+                            💻 Video Call
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="6">
+                        View
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 7 -->
+
+            <article class="interview-card" data-interview-id="7" data-status="completed" data-type="onsite"
+                data-date="2026-09-12T11:30" data-candidate="Vivek Singh">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        12
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Vivek Singh
+                        </h3>
+
+                        <span class="status-badge shortlisted">
+                            Completed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Software Engineer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 12 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 11:30 AM
+                        </span>
+
+                        <span>
+                            🏢 On-site
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="7">
+                        View
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Interview 8 -->
+
+            <article class="interview-card" data-interview-id="8" data-status="cancelled" data-type="phone"
+                data-date="2026-09-10T16:00" data-candidate="Ankit Jain">
+
+                <div class="interview-date">
+
+                    <span class="date-day">
+                        10
+                    </span>
+
+                    <span class="date-month">
+                        SEP
+                    </span>
+
+                </div>
+
+
+                <div class="interview-info">
+
+                    <div class="interview-title-row">
+
+                        <h3>
+                            Ankit Jain
+                        </h3>
+
+                        <span class="status-badge rejected">
+                            Cancelled
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Java Developer
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            📅 10 Sep 2026
+                        </span>
+
+                        <span>
+                            🕐 4:00 PM
+                        </span>
+
+                        <span>
+                            📞 Phone
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interview-actions">
+
+                    <button type="button" class="view-interview-btn" data-interview-id="8">
+                        View
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <section id="interviewsEmpty" class="empty-state" style="display: none;">
+
+            <div class="empty-icon">
+                📅
+            </div>
+
+            <h3>
+                No interviews found
+            </h3>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PAGINATION ================= -->
+
+        <div id="interviewsPagination" class="pagination">
+
+            <button type="button" class="pagination-btn active">
+                1
+            </button>
+
+            <button type="button" class="pagination-btn">
+                2
+            </button>
+
+            <button type="button" class="pagination-btn">
+                Next →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    CareerHub
+                </strong>
+
+                <p>
+                    Connecting great companies with great talent.
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

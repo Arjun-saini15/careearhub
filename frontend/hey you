@@ -1,0 +1,42 @@
+Main ek Online Job Portal bana raha hoon.
+
+Tech Stack:
+- Frontend: HTML, CSS, JavaScript
+- Backend: Java + Spring Boot
+- Database: MySQL
+- Later JWT authentication + role-based authorization
+
+Project folder:
+OnlineJobPortal/frontend/
+
+Important:
+- Website professional SaaS/job portal jaisi honi chahiye.
+- Brand name: CareerHub
+- Blue/white/navy professional design.
+- Responsive desktop/tablet/mobile.
+- CSS ek hi `style.css` mein maintain karna hai.
+- Abhi frontend UI bana rahe hain, JavaScript baad mein.
+- Backend aur MySQL baad mein.
+- Ek time par SIRF ONE PAGE banana hai.
+- Har page ka exact file path batana.
+- Existing CSS ko replace nahi karna, page-specific CSS `style.css` ke end mein append karna.
+- Har page banane ke baad mujhe Live Server par test karna hai.
+- Main "next" bolunga to next page banana.
+- Mujhe multiple pages ek saath mat dena.
+
+Already completed:
+1. index.html
+2. login.html
+3. register.html
+4. jobs.html
+5. job-details.html
+6. apply.html
+7. dashboard.html
+8. profile.html
+9. saved-jobs.html
+10. applications.html
+
+Next page:
+resume.html
+
+Design aur classes ko existing website ke saath consistent rakhna.

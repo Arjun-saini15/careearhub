@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Companies - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">C</span>
+            <span>CareerHub</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="users.html">
+                Users
+            </a>
+
+            <a href="jobs-management.html">
+                Jobs
+            </a>
+
+            <a href="companies.html" class="active">
+                Companies
+            </a>
+
+            <a href="applications-management.html">
+                Applications
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="settings.html" class="btn btn-outline">
+                Settings
+            </a>
+
+            <div class="user-avatar">
+                AS
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="admin-page-header">
+
+        <div class="container">
+
+            <div>
+
+                <span class="page-eyebrow">
+                    ADMIN PANEL
+                </span>
+
+                <h1>
+                    Manage Companies
+                </h1>
+
+                <p>
+                    View, search and manage companies registered on CareerHub.
+                </p>
+
+            </div>
+
+            <button
+                class="btn btn-primary"
+                id="addCompanyBtn"
+            >
+                + Add Company
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMPANY STATISTICS
+    ====================================================== -->
+
+    <section class="admin-user-stats">
+
+        <div class="container">
+
+            <div class="user-stats-grid">
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Total Companies
+                    </span>
+
+                    <strong id="companiesTotal">
+                        1,084
+                    </strong>
+
+                    <small>
+                        Registered companies
+                    </small>
+
+                </div>
+
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Active Companies
+                    </span>
+
+                    <strong id="companiesActive">
+                        972
+                    </strong>
+
+                    <small>
+                        Currently active
+                    </small>
+
+                </div>
+
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Pending Verification
+                    </span>
+
+                    <strong id="companiesPending">
+                        76
+                    </strong>
+
+                    <small>
+                        Waiting for approval
+                    </small>
+
+                </div>
+
+
+                <div class="user-stat-card">
+
+                    <span>
+                        Suspended
+                    </span>
+
+                    <strong id="companiesSuspended">
+                        36
+                    </strong>
+
+                    <small>
+                        Suspended companies
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMPANIES SECTION
+    ====================================================== -->
+
+    <section class="users-section">
+
+        <div class="container">
+
+            <div class="users-card">
+
+
+                <!-- =================================================
+                     TOOLBAR
+                ================================================== -->
+
+                <div class="users-toolbar">
+
+                    <!-- Search -->
+
+                    <div class="users-search">
+
+                        <input
+                            type="text"
+                            id="companySearch"
+                            placeholder="Search by company name..."
+                        >
+
+                    </div>
+
+
+                    <!-- Filters -->
+
+                    <div class="users-filters">
+
+
+                        <select id="companyIndustryFilter">
+
+                            <option value="all">
+                                All Industries
+                            </option>
+
+                            <option value="Technology">
+                                Technology
+                            </option>
+
+                            <option value="Finance">
+                                Finance
+                            </option>
+
+                            <option value="Healthcare">
+                                Healthcare
+                            </option>
+
+                            <option value="E-Commerce">
+                                E-Commerce
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Consulting">
+                                Consulting
+                            </option>
+
+                        </select>
+
+
+                        <select id="companyStatusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                            <option value="Suspended">
+                                Suspended
+                            </option>
+
+                        </select>
+
+
+                        <select id="companySort">
+
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                            <option value="name-az">
+                                Name A-Z
+                            </option>
+
+                            <option value="name-za">
+                                Name Z-A
+                            </option>
+
+                            <option value="jobs-high">
+                                Most Jobs
+                            </option>
+
+                            <option value="jobs-low">
+                                Least Jobs
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     COMPANIES TABLE
+                ================================================== -->
+
+                <div class="users-table-wrapper">
+
+                    <table class="users-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Company
+                                </th>
+
+                                <th>
+                                    Industry
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Jobs
+                                </th>
+
+                                <th>
+                                    Joined
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="companiesTableBody">
+
+                            <!-- Company rows will be created by JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+
+                    <!-- Empty State -->
+
+                    <div
+                        id="companiesEmptyState"
+                        style="display: none; padding: 40px; text-align: center;"
+                    >
+
+                        <h3>
+                            No companies found
+                        </h3>
+
+                        <p>
+                            Try changing your search or filters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAGINATION
+                ================================================== -->
+
+                <div class="users-pagination">
+
+                    <span id="companiesPaginationInfo">
+                        Showing 1–6 of 1,084 companies
+                    </span>
+
+
+                    <div class="pagination-buttons">
+
+                        <button
+                            id="companiesPreviousBtn"
+                            disabled
+                        >
+                            Previous
+                        </button>
+
+
+                        <div id="companiesPageButtons"></div>
+
+
+                        <button id="companiesNextBtn">
+                            Next
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 CareerHub. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Help Center
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+<script src="js/api.js"></script>
+<script src="companies.js"></script>
+
+</body>
+
+</html>

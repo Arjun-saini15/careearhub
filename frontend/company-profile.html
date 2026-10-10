@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Manage your company profile on CareerHub.">
+
+    <title>Company Profile — CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <!-- BRAND -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    C
+                </span>
+
+                <span>
+                    CareerHub
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a href="employer-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="my-jobs.html">
+                    My Jobs
+                </a>
+
+                <a href="applicants.html">
+                    Applicants
+                </a>
+
+                <a href="interviews.html">
+                    Interviews
+                </a>
+
+            </nav>
+
+
+            <!-- ACTIONS -->
+
+            <div class="nav-actions">
+
+                <a href="post-job.html" class="btn btn-primary">
+
+                    Post a Job
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="section">
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+                 ================================================= -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <p class="page-eyebrow">
+                        Employer
+                    </p>
+
+                    <h1>
+                        Company Profile
+                    </h1>
+
+                    <p>
+                        Manage your company information and give
+                        candidates a better understanding of your
+                        organization.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 COMPANY PREVIEW
+                 ================================================= -->
+
+            <section class="dashboard-card" style="margin-bottom: 24px;">
+
+                <div style="
+                    display:flex;
+                    align-items:center;
+                    gap:20px;
+                    flex-wrap:wrap;
+                ">
+
+                    <!-- COMPANY LOGO -->
+
+                    <div id="companyPreviewLogo" class="company-logo" style="
+                            width:72px;
+                            height:72px;
+                            font-size:28px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            flex-shrink:0;
+                        ">
+                        C
+                    </div>
+
+
+                    <!-- COMPANY BASIC INFO -->
+
+                    <div style="flex:1; min-width:220px;">
+
+                        <h2 id="companyPreviewName" style="margin-bottom:6px;">
+                            CloudWorks
+                        </h2>
+
+                        <p id="companyPreviewIndustry" style="margin:0;">
+                            Technology
+                        </p>
+
+                    </div>
+
+
+                    <!-- PREVIEW STATUS -->
+
+                    <div>
+
+                        <span class="status-badge status-active">
+                            Company Profile
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPANY STATS
+                 ================================================= -->
+
+            <section class="dashboard-stats" style="margin-bottom:24px;">
+
+
+                <!-- ACTIVE JOBS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Active Jobs
+                    </span>
+
+                    <strong id="companyProfileActiveJobs">
+                        8
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Currently hiring
+                    </span>
+
+                </div>
+
+
+                <!-- APPLICANTS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Applicants
+                    </span>
+
+                    <strong id="companyProfileApplicants">
+                        126
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Total applicants
+                    </span>
+
+                </div>
+
+
+                <!-- INTERVIEWS -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Interviews
+                    </span>
+
+                    <strong id="companyProfileInterviews">
+                        18
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Scheduled interviews
+                    </span>
+
+                </div>
+
+
+                <!-- HIRED -->
+
+                <div class="dashboard-stat-card">
+
+                    <span class="dashboard-stat-label">
+                        Hired
+                    </span>
+
+                    <strong id="companyProfileHired">
+                        12
+                    </strong>
+
+                    <span class="dashboard-stat-info">
+                        Successful hires
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPANY PROFILE FORM
+                 ================================================= -->
+
+            <section class="dashboard-card">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <h2>
+                            Company Information
+                        </h2>
+
+                        <p>
+                            Keep your company information accurate
+                            and up to date.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="companyProfileForm">
+
+
+                    <!-- =========================================
+                         BASIC INFORMATION
+                         ========================================= -->
+
+                    <div style="margin-bottom:28px;">
+
+                        <h3 style="margin-bottom:18px;">
+                            Basic Information
+                        </h3>
+
+
+                        <div class="form-grid">
+
+
+                            <!-- COMPANY NAME -->
+
+                            <div class="form-group">
+
+                                <label for="companyName">
+                                    Company Name
+                                </label>
+
+                                <input type="text" id="companyName" name="companyName" placeholder="Enter company name"
+                                    value="CloudWorks">
+
+                            </div>
+
+
+                            <!-- INDUSTRY -->
+
+                            <div class="form-group">
+
+                                <label for="companyIndustry">
+                                    Industry
+                                </label>
+
+                                <input type="text" id="companyIndustry" name="companyIndustry"
+                                    placeholder="e.g. Technology" value="Technology">
+
+                            </div>
+
+
+                            <!-- LOCATION -->
+
+                            <div class="form-group">
+
+                                <label for="companyLocation">
+                                    Location
+                                </label>
+
+                                <input type="text" id="companyLocation" name="companyLocation"
+                                    placeholder="e.g. Noida, India" value="Noida, India">
+
+                            </div>
+
+
+                            <!-- WEBSITE -->
+
+                            <div class="form-group">
+
+                                <label for="companyWebsite">
+                                    Website
+                                </label>
+
+                                <input type="url" id="companyWebsite" name="companyWebsite"
+                                    placeholder="https://example.com" value="https://cloudworks.example.com">
+
+                            </div>
+
+
+                            <!-- COMPANY SIZE -->
+
+                            <div class="form-group">
+
+                                <label for="companySize">
+                                    Company Size
+                                </label>
+
+                                <select id="companySize" name="companySize">
+
+                                    <option value="">
+                                        Select company size
+                                    </option>
+
+                                    <option value="1-10">
+                                        1-10 employees
+                                    </option>
+
+                                    <option value="11-50">
+                                        11-50 employees
+                                    </option>
+
+                                    <option value="51-200">
+                                        51-200 employees
+                                    </option>
+
+                                    <option value="201-500">
+                                        201-500 employees
+                                    </option>
+
+                                    <option value="501-1000">
+                                        501-1000 employees
+                                    </option>
+
+                                    <option value="1001+">
+                                        1001+ employees
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- FOUNDED -->
+
+                            <div class="form-group">
+
+                                <label for="companyFounded">
+                                    Founded
+                                </label>
+
+                                <input type="number" id="companyFounded" name="companyFounded" placeholder="e.g. 2018"
+                                    value="2018" min="1800" max="2100">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         ABOUT COMPANY
+                         ========================================= -->
+
+                    <div style="margin-bottom:28px;">
+
+                        <h3 style="margin-bottom:18px;">
+                            About the Company
+                        </h3>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="form-group">
+
+                            <label for="companyDescription">
+                                Company Description
+                            </label>
+
+                            <textarea id="companyDescription" name="companyDescription" rows="5"
+                                placeholder="Tell candidates about your company...">CloudWorks is a technology company building modern digital products and solutions for businesses. We focus on creating reliable software, developing talented teams and solving meaningful problems through technology.</textarea>
+
+                        </div>
+
+
+                        <!-- CULTURE -->
+
+                        <div class="form-group">
+
+                            <label for="companyCulture">
+                                Company Culture
+                            </label>
+
+                            <textarea id="companyCulture" name="companyCulture" rows="4"
+                                placeholder="Describe your company culture...">We believe in collaboration, continuous learning, ownership and creating an environment where people can grow professionally.</textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         MISSION & VISION
+                         ========================================= -->
+
+                    <div style="margin-bottom:28px;">
+
+                        <h3 style="margin-bottom:18px;">
+                            Mission & Vision
+                        </h3>
+
+
+                        <!-- MISSION -->
+
+                        <div class="form-group">
+
+                            <label for="companyMission">
+                                Mission
+                            </label>
+
+                            <textarea id="companyMission" name="companyMission" rows="3"
+                                placeholder="What is your company's mission?">Build technology that helps businesses and people work better.</textarea>
+
+                        </div>
+
+
+                        <!-- VISION -->
+
+                        <div class="form-group">
+
+                            <label for="companyVision">
+                                Vision
+                            </label>
+
+                            <textarea id="companyVision" name="companyVision" rows="3"
+                                placeholder="What is your company's vision?">Create a future where technology makes professional work more accessible, efficient and meaningful.</textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         SOCIAL LINKS
+                         ========================================= -->
+
+                    <div style="margin-bottom:28px;">
+
+                        <h3 style="margin-bottom:18px;">
+                            Social & Contact
+                        </h3>
+
+
+                        <div class="form-grid">
+
+
+                            <!-- LINKEDIN -->
+
+                            <div class="form-group">
+
+                                <label for="companyLinkedin">
+                                    LinkedIn
+                                </label>
+
+                                <input type="url" id="companyLinkedin" name="companyLinkedin"
+                                    placeholder="LinkedIn company URL" value="">
+
+                            </div>
+
+
+                            <!-- TWITTER -->
+
+                            <div class="form-group">
+
+                                <label for="companyTwitter">
+                                    X / Twitter
+                                </label>
+
+                                <input type="url" id="companyTwitter" name="companyTwitter"
+                                    placeholder="X / Twitter URL" value="">
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="companyEmail">
+                                    Contact Email
+                                </label>
+
+                                <input type="email" id="companyEmail" name="companyEmail"
+                                    placeholder="company@example.com" value="hr@cloudworks.example.com">
+
+                            </div>
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label for="companyPhone">
+                                    Contact Phone
+                                </label>
+
+                                <input type="tel" id="companyPhone" name="companyPhone" placeholder="+91 XXXXX XXXXX"
+                                    value="+91 98765 43210">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         FORM ACTIONS
+                         ========================================= -->
+
+                    <div style="
+                        display:flex;
+                        justify-content:flex-end;
+                        gap:12px;
+                        flex-wrap:wrap;
+                        padding-top:20px;
+                        border-top:1px solid var(--border);
+                    ">
+
+                        <button type="button" id="cancelCompanyProfile" class="btn btn-secondary">
+                            Cancel
+                        </button>
+
+
+                        <button type="submit" id="saveCompanyProfile" class="btn btn-primary">
+                            Save Company Profile
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPANY JOBS
+                 ================================================= -->
+
+            <section class="dashboard-section" style="margin-top:32px;">
+
+
+                <div class="dashboard-card-header">
+
+                    <div>
+
+                        <h2>
+                            Jobs at Your Company
+                        </h2>
+
+                        <p>
+                            View the jobs currently posted by your company.
+                        </p>
+
+                    </div>
+
+
+                    <a href="post-job.html" class="btn btn-primary">
+                        Post a Job
+                    </a>
+
+                </div>
+
+
+                <!-- JOBS WILL BE RENDERED BY JAVASCRIPT -->
+
+                <div id="companyProfileJobs" class="dashboard-job-grid">
+                </div>
+
+
+            </section>
+
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-top">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            C
+                        </span>
+
+                        <span>
+                            CareerHub
+                        </span>
+
+                    </a>
+
+                    <p>
+                        A modern platform connecting talented people
+                        with companies building the future.
+                    </p>
+
+                </div>
+
+
+
+                <!-- JOB SEEKERS -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        For job seekers
+                    </h4>
+
+                    <a href="jobs.html">
+                        Find jobs
+                    </a>
+
+                    <a href="saved-jobs.html">
+                        Saved jobs
+                    </a>
+
+                    <a href="applications.html">
+                        Applications
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                </div>
+
+
+
+                <!-- EMPLOYERS -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        For employers
+                    </h4>
+
+                    <a href="post-job.html">
+                        Post a job
+                    </a>
+
+                    <a href="employer-dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="applicants.html">
+                        Applicants
+                    </a>
+
+                    <a href="interviews.html">
+                        Interviews
+                    </a>
+
+                </div>
+
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="company-profile.html">
+                        Company profile
+                    </a>
+
+                    <a href="#">
+                        About us
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 CareerHub. All rights reserved.
+                </span>
+
+                <span>
+                    Built for modern hiring.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+    <script src="company-profile.js"></script>
+</body>
+
+</html>

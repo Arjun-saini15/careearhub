@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - CareerHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">C</span>
+                <span>CareerHub</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="jobs.html">Find Jobs</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="applications.html">Applications</a>
+                <a href="saved-jobs.html">Saved Jobs</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="profile.html" class="nav-profile">
+                    <span class="nav-avatar">AS</span>
+                    <span>Arjun</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="resume-header">
+        <div class="container">
+
+            <div class="resume-header-content">
+
+                <div>
+                    <span class="page-eyebrow">Job Seeker</span>
+
+                    <h1>My Resume</h1>
+
+                    <p>
+                        Upload and manage your resume for job applications.
+                    </p>
+                </div>
+
+                <!-- Opens file picker -->
+                <button class="btn btn-primary" id="uploadResumeTopBtn" type="button">
+                    Upload New Resume
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="container resume-page">
+
+        <div class="resume-layout">
+
+            <!-- Main Resume Area -->
+            <section class="resume-main">
+
+                <!-- Current Resume -->
+                <div class="resume-card">
+
+                    <div class="resume-card-header">
+
+                        <div>
+                            <h2>Current Resume</h2>
+
+                            <p>
+                                Your active resume used for job applications.
+                            </p>
+                        </div>
+
+                        <span class="resume-active-badge" id="resumeActiveBadge">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="resume-file">
+
+                        <div class="resume-file-icon">
+                            PDF
+                        </div>
+
+                        <div class="resume-file-info">
+
+                            <h3 id="currentResumeName">
+                                Arjun_Saini_Resume.pdf
+                            </h3>
+
+                            <p id="currentResumeDate">
+                                Uploaded on September 10, 2026
+                            </p>
+
+                            <span id="currentResumeSize">
+                                PDF · 1.8 MB
+                            </span>
+
+                        </div>
+
+
+                        <div class="resume-file-actions">
+
+                            <button class="btn btn-outline" id="previewResumeBtn" type="button">
+                                Preview
+                            </button>
+
+                            <button class="btn btn-outline" id="downloadResumeBtn" type="button">
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Upload Resume -->
+                <div class="resume-card">
+
+                    <div class="resume-card-header">
+
+                        <div>
+                            <h2>Upload Resume</h2>
+
+                            <p>
+                                Upload a new version of your resume.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hidden actual file input -->
+                    <input type="file" id="resumeFileInput" accept=".pdf,.doc,.docx" hidden>
+
+
+                    <div class="resume-upload-box" id="resumeUploadBox">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h3>
+                            Upload your resume
+                        </h3>
+
+                        <p>
+                            Drag and drop your file here, or browse from your computer.
+                        </p>
+
+                        <button class="btn btn-outline" id="chooseResumeBtn" type="button">
+                            Choose File
+                        </button>
+
+                        <span class="upload-note" id="resumeUploadNote">
+                            Supported formats: PDF, DOC, DOCX · Maximum size: 5 MB
+                        </span>
+
+                    </div>
+
+                    <!-- Selected file information -->
+                    <div id="selectedResumeInfo" style="display: none;">
+                        <p id="selectedResumeName"></p>
+                    </div>
+
+                </div>
+
+
+                <!-- Resume Information -->
+                <div class="resume-card">
+
+                    <div class="resume-card-header">
+
+                        <div>
+                            <h2>Resume Information</h2>
+
+                            <p>
+                                Keep your resume information up to date.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="resume-info-grid">
+
+                        <div class="resume-info-item">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="resumeFullName">
+                                Arjun Saini
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resume-info-item">
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong id="resumeEmail">
+                                arjun@example.com
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resume-info-item">
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong id="resumePhone">
+                                +91 98765 43210
+                            </strong>
+
+                        </div>
+
+
+                        <div class="resume-info-item">
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong id="resumeLocation">
+                                Noida, India
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <a href="profile.html" class="text-link">
+                        Edit Profile Information →
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- Sidebar -->
+            <aside class="resume-sidebar">
+
+                <!-- Resume Score -->
+                <div class="resume-side-card">
+
+                    <h3>
+                        Resume Strength
+                    </h3>
+
+
+                    <div class="resume-score">
+
+                        <strong id="resumeStrengthValue">
+                            82%
+                        </strong>
+
+                        <span id="resumeStrengthLabel">
+                            Good
+                        </span>
+
+                    </div>
+
+
+                    <div class="resume-progress">
+
+                        <div class="resume-progress-bar" id="resumeStrengthBar" style="width: 82%;"></div>
+
+                    </div>
+
+
+                    <p id="resumeStrengthMessage">
+                        Your resume is in good shape. Add more relevant skills
+                        and projects to improve it.
+                    </p>
+
+                </div>
+
+
+                <!-- Checklist -->
+                <div class="resume-side-card">
+
+                    <h3>
+                        Resume Checklist
+                    </h3>
+
+
+                    <ul class="resume-checklist">
+
+                        <li class="completed">
+                            <span>✓</span>
+                            Contact information
+                        </li>
+
+                        <li class="completed">
+                            <span>✓</span>
+                            Professional summary
+                        </li>
+
+                        <li class="completed">
+                            <span>✓</span>
+                            Education
+                        </li>
+
+                        <li class="completed">
+                            <span>✓</span>
+                            Skills
+                        </li>
+
+                        <li>
+                            <span>○</span>
+                            Work experience
+                        </li>
+
+                        <li>
+                            <span>○</span>
+                            Projects
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Tips -->
+                <div class="resume-side-card">
+
+                    <h3>
+                        Resume Tips
+                    </h3>
+
+
+                    <ul class="resume-tips">
+
+                        <li>
+                            Keep your resume concise and easy to read.
+                        </li>
+
+                        <li>
+                            Highlight skills that match the jobs you apply for.
+                        </li>
+
+                        <li>
+                            Use clear job titles and measurable achievements.
+                        </li>
+
+                        <li>
+                            Update your resume regularly.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-mark">C</span>
+                    <span>CareerHub</span>
+                </a>
+
+                <p>
+                    Find the right opportunity and build your career.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="jobs.html">
+                    Find Jobs
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+                <a href="applications.html">
+                    Applications
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Common JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+ 
+</html> 

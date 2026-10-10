@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Applications - CareerHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">C</span>
+
+                <span>CareerHub</span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <a href="jobs-management.html">
+                    Jobs
+                </a>
+
+                <a href="companies.html">
+                    Companies
+                </a>
+
+                <a href="applications-management.html" class="active">
+                    Applications
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a href="settings.html" class="btn btn-outline">
+                    Settings
+                </a>
+
+                <div class="user-avatar">
+                    AS
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+        <section class="admin-page-header">
+
+            <div class="container">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        ADMIN PANEL
+                    </span>
+
+                    <h1>
+                        Manage Applications
+                    </h1>
+
+                    <p>
+                        Monitor and manage job applications across the platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+         APPLICATION STATISTICS
+    ====================================================== -->
+
+        <section class="admin-user-stats">
+
+            <div class="container">
+
+                <div class="user-stats-grid">
+
+
+                    <div class="user-stat-card">
+
+                        <span>
+                            Total Applications
+                        </span>
+
+                        <strong id="applicationsTotal">
+                            28,640
+                        </strong>
+
+                        <small>
+                            All submitted applications
+                        </small>
+
+                    </div>
+
+
+                    <div class="user-stat-card">
+
+                        <span>
+                            Under Review
+                        </span>
+
+                        <strong id="applicationsReview">
+                            8,420
+                        </strong>
+
+                        <small>
+                            Applications being reviewed
+                        </small>
+
+                    </div>
+
+
+                    <div class="user-stat-card">
+
+                        <span>
+                            Shortlisted
+                        </span>
+
+                        <strong id="applicationsShortlisted">
+                            3,280
+                        </strong>
+
+                        <small>
+                            Candidates shortlisted
+                        </small>
+
+                    </div>
+
+
+                    <div class="user-stat-card">
+
+                        <span>
+                            Selected
+                        </span>
+
+                        <strong id="applicationsSelected">
+                            1,146
+                        </strong>
+
+                        <small>
+                            Successful applications
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+         APPLICATIONS SECTION
+    ====================================================== -->
+
+        <section class="users-section">
+
+            <div class="container">
+
+                <div class="users-card">
+
+
+                    <!-- =================================================
+                     TOOLBAR
+                ================================================== -->
+
+                    <div class="users-toolbar">
+
+
+                        <!-- Search -->
+
+                        <div class="users-search">
+
+                            <input type="text" id="applicationSearch" placeholder="Search candidate or job...">
+
+                        </div>
+
+
+
+                        <!-- Filters -->
+
+                        <div class="users-filters">
+
+
+                            <select id="applicationStatusFilter">
+
+                                <option value="all">
+                                    All Status
+                                </option>
+
+                                <option value="Applied">
+                                    Applied
+                                </option>
+
+                                <option value="Under Review">
+                                    Under Review
+                                </option>
+
+                                <option value="Shortlisted">
+                                    Shortlisted
+                                </option>
+
+                                <option value="Interview">
+                                    Interview
+                                </option>
+
+                                <option value="Selected">
+                                    Selected
+                                </option>
+
+                                <option value="Rejected">
+                                    Rejected
+                                </option>
+
+                            </select>
+
+
+
+                            <select id="applicationJobTypeFilter">
+
+                                <option value="all">
+                                    All Job Types
+                                </option>
+
+                                <option value="Full Time">
+                                    Full Time
+                                </option>
+
+                                <option value="Part Time">
+                                    Part Time
+                                </option>
+
+                                <option value="Internship">
+                                    Internship
+                                </option>
+
+                                <option value="Contract">
+                                    Contract
+                                </option>
+
+                            </select>
+
+
+
+                            <select id="applicationSort">
+
+                                <option value="newest">
+                                    Newest First
+                                </option>
+
+                                <option value="oldest">
+                                    Oldest First
+                                </option>
+
+                                <option value="candidate-az">
+                                    Candidate A-Z
+                                </option>
+
+                                <option value="candidate-za">
+                                    Candidate Z-A
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                     APPLICATIONS TABLE
+                ================================================== -->
+
+                    <div class="users-table-wrapper">
+
+                        <table class="users-table applications-admin-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Candidate
+                                    </th>
+
+                                    <th>
+                                        Job
+                                    </th>
+
+                                    <th>
+                                        Company
+                                    </th>
+
+                                    <th>
+                                        Applied
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="applicationsTableBody">
+
+                                <!-- Application rows will be generated by JavaScript -->
+
+                            </tbody>
+
+
+                        </table>
+
+
+
+                        <!-- Empty State -->
+
+                        <div id="applicationsEmptyState" style="display: none; padding: 40px; text-align: center;">
+
+                            <h3>
+                                No applications found
+                            </h3>
+
+                            <p>
+                                Try changing your search or filters.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                     PAGINATION
+                ================================================== -->
+
+                    <div class="users-pagination">
+
+                        <span id="applicationsPaginationInfo">
+                            Showing 1–6 of 28,640 applications
+                        </span>
+
+
+                        <div class="pagination-buttons">
+
+
+                            <button id="applicationsPreviousBtn" disabled>
+                                Previous
+                            </button>
+
+
+                            <div id="applicationsPageButtons"></div>
+
+
+                            <button id="applicationsNextBtn">
+                                Next
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 CareerHub. All rights reserved.
+            </p>
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Help Center
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="applications-management.js"></script>
+
+
+</body>
+
+</html>
