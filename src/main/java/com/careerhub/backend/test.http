@@ -1,0 +1,434 @@
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Arjun",
+    "email": "arjun@gmail.com",
+    "password": "123456",
+    "role": "JOB_SEEKER"
+}
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "arjun@gmail.com",
+    "password": "123456"
+}
+###
+
+POST http://localhost:8080/api/jobs
+Content-Type: application/json
+
+{
+    "title": "Java Developer",
+    "company": "TCS",
+    "location": "Noida",
+    "salary": "6 LPA",
+    "description": "Java backend developer required",
+    "jobType": "Full Time",
+    "skills": "Java, Spring Boot, MySQL",
+    "postedDate": "2026-09-27"
+}
+###
+
+GET http://localhost:8080/api/jobs
+###
+
+GET http://localhost:8080/api/jobs/1
+###
+
+### Search Jobs
+
+GET http://localhost:8080/api/jobs/search?keyword=Java
+
+###
+
+DELETE http://localhost:8080/api/jobs/1
+###
+
+PUT http://localhost:8080/api/jobs/2
+Content-Type: application/json
+
+{
+    "title": "Senior Java Developer",
+    "company": "TCS",
+    "location": "Noida",
+    "salary": "10 LPA",
+    "description": "Senior Java backend developer required",
+    "jobType": "Full Time",
+    "skills": "Java, Spring Boot, MySQL, REST API",
+    "postedDate": "2026-09-28"
+}
+### Apply for a Job
+
+POST http://localhost:8080/api/applications
+Content-Type: application/json
+
+{
+    "jobId": 2,
+    "userId": 2,
+    "resume": "arjun_resume.pdf",
+    "status": "APPLIED",
+    "appliedDate": "2026-09-28"
+}
+### Get All Applications
+
+GET http://localhost:8080/api/applications
+### Get Application by ID
+
+GET http://localhost:8080/api/applications/1
+### Update Application Status
+
+PUT http://localhost:8080/api/applications/1/status?status=SHORTLISTED
+### Delete Application
+
+DELETE http://localhost:8080/api/applications/1
+### Check Deleted Application
+
+GET http://localhost:8080/api/applications/1
+### Get Applications by Job ID
+
+GET http://localhost:8080/api/applications/job/2
+### Create Company
+
+POST http://localhost:8080/api/companies
+Content-Type: application/json
+
+{
+    "name": "TCS",
+    "location": "Noida",
+    "description": "IT services and consulting company",
+    "website": "https://www.tcs.com",
+    "logo": "tcs.png"
+}
+### Get All Companies
+
+GET http://localhost:8080/api/companies
+
+###
+
+### Get Company by ID
+
+GET http://localhost:8080/api/companies/1
+
+###
+
+### Delete Company
+
+DELETE http://localhost:8080/api/companies/1
+### Create Employer Job
+
+POST http://localhost:8080/api/jobs
+Content-Type: application/json
+
+{
+    "title": "Backend Developer",
+    "company": "TCS",
+    "location": "Noida",
+    "salary": "8 LPA",
+    "description": "Spring Boot backend developer",
+    "jobType": "Full Time",
+    "skills": "Java, Spring Boot, MySQL",
+    "postedDate": "2026-09-28",
+    "employerId": 2
+}
+### Get Employer Jobs
+
+GET http://localhost:8080/api/jobs/employer/2
+### Get Employer Applications
+GET http://localhost:8080/api/applications/employer/2
+### Create Application for Employer 2's Job
+
+POST http://localhost:8080/api/applications
+Content-Type: application/json
+
+{
+    "jobId": 11,
+    "userId": 2,
+    "resume": "arjun_resume.pdf",
+    "status": "APPLIED",
+    "appliedDate": "2026-09-28"
+}
+### Get Employer Applications
+GET http://localhost:8080/api/applications/employer/2
+### Create Interview
+
+POST http://localhost:8080/api/interviews
+Content-Type: application/json
+
+{
+    "applicationId": 2,
+    "employerId": 2,
+    "userId": 2,
+    "interviewDate": "2026-10-01",
+    "interviewTime": "11:00 AM",
+    "mode": "ONLINE",
+    "meetingLink": "https://meet.google.com/example",
+    "status": "SCHEDULED"
+}
+
+###
+### Create Resume
+
+POST http://localhost:8080/api/resumes
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "fileName": "arjun_resume.pdf",
+    "filePath": "uploads/arjun_resume.pdf",
+    "uploadedDate": "2026-09-28"
+}
+
+###
+### Save Job
+
+POST http://localhost:8080/api/saved-jobs
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "jobId": 11,
+    "savedDate": "2026-09-28"
+}
+
+###
+### Create Admin
+
+POST http://localhost:8080/api/admins
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "name": "Arjun",
+    "email": "admin@careerhub.com"
+}
+
+###
+### Create Notification
+
+POST http://localhost:8080/api/notifications
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "title": "Application Update",
+    "message": "Your application status has been updated.",
+    "type": "APPLICATION",
+    "isRead": false,
+    "createdDate": "2026-09-28"
+}
+
+###
+### Create Job Category
+
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+    "name": "Software Development",
+    "description": "Jobs related to software and application development."
+}
+
+###
+### Create Employer Profile
+
+POST http://localhost:8080/api/employer-profiles
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "companyId": 1,
+    "name": "Arjun",
+    "email": "employer@careerhub.com",
+    "phone": "9876543210",
+    "designation": "HR Manager"
+}
+
+###
+### Create Job With Category
+
+POST http://localhost:8080/api/jobs
+Content-Type: application/json
+
+{
+    "title": "Java Developer",
+    "company": "TCS",
+    "location": "Noida",
+    "salary": "8 LPA",
+    "description": "Java Spring Boot Developer",
+    "jobType": "Full Time",
+    "skills": "Java, Spring Boot, MySQL",
+    "postedDate": "2026-09-28",
+    "employerId": 2,
+    "categoryId": 1
+}
+
+###
+### JWT Login
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+### JWT Login Test
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+### Register User
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Test User",
+    "email": "test@gmail.com",
+    "password": "123456",
+    "role": "USER"
+}
+
+###
+### JWT Login
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+### Get All Users
+
+GET http://localhost:8080/api/users
+
+###
+### JWT Login
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "arjun@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "name": "",
+  "email": "wrong-email",
+  "password": "123",
+  "role": ""
+}
+POST http://localhost:8080/api/jobs
+Content-Type: application/json
+
+{
+  "title": "",
+  "company": "",
+  "location": "",
+  "salary": "",
+  "description": "",
+  "jobType": "",
+  "skills": "",
+  "postedDate": "",
+  "employerId": 2,
+  "categoryId": 1
+}
+POST http://localhost:8080/api/applications
+Content-Type: application/json
+
+{
+  "jobId": null,
+  "userId": null,
+  "resume": "",
+  "status": "",
+  "appliedDate": ""
+}
+POST http://localhost:8080/api/companies
+Content-Type: application/json
+
+{
+  "name": "",
+  "location": "",
+  "description": "",
+  "website": "",
+  "logo": ""
+}
+POST http://localhost:8080/api/interviews
+Content-Type: application/json
+
+{
+  "applicationId": null,
+  "employerId": null,
+  "userId": null,
+  "interviewDate": "",
+  "interviewTime": "",
+  "mode": "",
+  "meetingLink": "",
+  "status": ""
+}
+POST http://localhost:8080/api/profiles
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "phone": "",
+  "location": "",
+  "skills": "",
+  "education": "",
+  "bio": ""
+}
+POST http://localhost:8080/api/notifications
+Content-Type: application/json
+
+{
+  "userId": null,
+  "title": "",
+  "message": "",
+  "type": "",
+  "isRead": false,
+  "createdDate": ""
+}
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+  "name": "",
+  "description": ""
+}
+POST http://localhost:8080/api/saved-jobs
+Content-Type: application/json
+
+{
+  "userId": null,
+  "jobId": null,
+  "savedDate": ""
+}
+POST http://localhost:8080/api/admins
+Content-Type: application/json
+
+{
+  "userId": null,
+  "name": "",
+  "email": "wrong-email"
+}
